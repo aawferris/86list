@@ -89,8 +89,7 @@ src
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
-
+```
 | Task                             | Priority | Estimated Time | Time Invested | Actual Time |
 | -------------------------------- | :------: | :------------: | :-----------: | :---------: |
 | Setup Ruby on Rails Boiler Plate |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
@@ -108,6 +107,7 @@ src
 | Local Deployment | M | 3hrs | ---- | ---- |
 | Netlify Deployment | M | 3hrs | ---- | ---- |
 | TOTAL | | 45hrs | 3hrs | TBD |
+```
 
 <br>
 
