@@ -72,7 +72,42 @@ src
       |__ mockups
 |__ components/
       |__ Header.jsx
+      |__ Header.css
+      |__ Footer.jsx
+      |__ Footer.css
+      |__ Navigation.jsx
+      |__ Navigation.css
+|__ containers/
+      |__ MainContainer.jsx
+|__ layouts/
+      |__ Layout.jsx
+      |__ Layout.css
+|__ screens/
+      |__ Landing.jsx
+      |__ Landing.css
+      |__ Register.jsx
+      |__ Register.css
+      |__ Login.jsx
+      |__ Login.css
+      |__ Threads.jsx
+      |__ Threads.css
+      |__ Post.jsx
+      |__ Post.css
 |__ services/
+      |__ apiConfig.js
+      |__ restaurants.js
+      |__ locations.js
+      |__ users.js
+      |__ auth.js **(Post)
+|__ App.js
+|__ App.css
+|__ index.js
+|__ index.css
+|__ reportWebVitals.js
+|__ .gitignore
+|__ package-lock.json
+|__ package.json
+|__ README.md
 
 ```
 
