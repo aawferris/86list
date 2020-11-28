@@ -91,7 +91,7 @@ src
 
 | Task                                            | Priority | Estimated Time | Time Invested | Actual Time |
 | ----------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Setup Ruby on Rails Boiler Plate                |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Setup Ruby on Rails Boiler Plate                |    L     |      3hrs      |     ----      |    ----     |
 | Create BE for restaurants, locations, and users |    H     |      6hrs      |     ----      |    ----     |
 | Create BE for posts and comments                |    H     |      6hrs      |     ----      |    ----     |
 | Create CRUD Actions                             |    H     |      6hrs      |     ----      |    ----     |
