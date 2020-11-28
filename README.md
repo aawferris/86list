@@ -89,23 +89,22 @@ src
 
 #### Time Estimates
 
-| Task                             | Priority | Estimated Time | Time Invested | Actual Time |
-| -------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Setup Ruby on Rails Boiler Plate |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-
-| Create BE for restaurants, locations, and users | H | 6hrs | ---- | ---- |
-| Create BE for posts and comments | H | 6hrs | ---- | ---- |
-| Create CRUD Actions | H | 6hrs | ---- | ---- |
-| Create sign up form | H | 3hrs | ---- | ---- |
-| Create login screen | H | 3hrs | ---- | ---- |
-| Create thread screen | H | 3hrs | ---- | ---- |
-| Create post view/manipulations screens | H | 3hrs | ---- | ---- |
-| Styling for aforementioned screens | H | 3hrs | ---- | ---- |
-| Advanced styling | H | 3hrs | ---- | ---- |
-| Debugging and Testing | M | 3hrs | ---- | ---- |
-| Local Deployment | M | 3hrs | ---- | ---- |
-| Netlify Deployment | M | 3hrs | ---- | ---- |
-| TOTAL | | 45hrs | 3hrs | TBD |
+| Task                                            | Priority | Estimated Time | Time Invested | Actual Time |
+| ----------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
+| Setup Ruby on Rails Boiler Plate                |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Create BE for restaurants, locations, and users |    H     |      6hrs      |     ----      |    ----     |
+| Create BE for posts and comments                |    H     |      6hrs      |     ----      |    ----     |
+| Create CRUD Actions                             |    H     |      6hrs      |     ----      |    ----     |
+| Create sign up form                             |    H     |      3hrs      |     ----      |    ----     |
+| Create login screen                             |    H     |      3hrs      |     ----      |    ----     |
+| Create thread screen                            |    H     |      3hrs      |     ----      |    ----     |
+| Create post view/manipulations screens          |    H     |      3hrs      |     ----      |    ----     |
+| Styling for aforementioned screens              |    H     |      3hrs      |     ----      |    ----     |
+| Advanced styling                                |    H     |      3hrs      |     ----      |    ----     |
+| Debugging and Testing                           |    M     |      3hrs      |     ----      |    ----     |
+| Local Deployment                                |    M     |      3hrs      |     ----      |    ----     |
+| Netlify Deployment                              |    M     |      3hrs      |     ----      |    ----     |
+| TOTAL                                           |          |     45hrs      |     3hrs      |     TBD     |
 
 <br>
 
