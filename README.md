@@ -28,13 +28,13 @@
 
 #### Wireframes
 
-![Desktop Figma](https://www.figma.com/file/hhDs0Zzcj7HipqUA3qnL0i/86list?node-id=0%3A1)
+https://www.figma.com/file/hhDs0Zzcj7HipqUA3qnL0i/86list?node-id=0%3A1
 
 - Desktop, Tablet, and Mobile
 
 #### Component Tree
 
-![Component Tree](https://drive.google.com/file/d/1uOZzHsECldIo8Gz9M2P_28Zu0vPK6UVV/view?usp=sharing)
+https://drive.google.com/drive/folders/1S--7pPaJlY2KVtCWv35L0tuRgBYdXdwN
 
 #### Component Hierarchy
 
@@ -115,7 +115,7 @@ src
 
 #### ERD Model
 
-![ERD](https://drive.google.com/file/d/1g0UNskYK6LO7mjwM-IBBSGQFQ2SdZR1c/view?usp=sharing)
+https://drive.google.com/drive/folders/1S--7pPaJlY2KVtCWv35L0tuRgBYdXdwN
 
 <br>
 
