@@ -89,7 +89,6 @@ src
 
 #### Time Estimates
 
-```
 | Task                             | Priority | Estimated Time | Time Invested | Actual Time |
 | -------------------------------- | :------: | :------------: | :-----------: | :---------: |
 | Setup Ruby on Rails Boiler Plate |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
@@ -107,7 +106,6 @@ src
 | Local Deployment | M | 3hrs | ---- | ---- |
 | Netlify Deployment | M | 3hrs | ---- | ---- |
 | TOTAL | | 45hrs | 3hrs | TBD |
-```
 
 <br>
 
@@ -127,6 +125,6 @@ https://drive.google.com/drive/folders/1S--7pPaJlY2KVtCWv35L0tuRgBYdXdwN
 - Require authorization for users to post and comment
 - Create an admin login to see and manipulate the data for restraunts and locations (for apporval) and users
 
-## Code Showcase
+<!-- ## Code Showcase -->
 
-## Code Issues & Resolutions
+<!-- ## Code Issues & Resolutions -->
