@@ -28,21 +28,17 @@
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
-
 ![Desktop Figma](https://www.figma.com/file/hhDs0Zzcj7HipqUA3qnL0i/86list?node-id=0%3A1)
 
 - Desktop, Tablet, and Mobile
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components.
+![Component Tree](https://drive.google.com/file/d/1uOZzHsECldIo8Gz9M2P_28Zu0vPK6UVV/view?usp=sharing)
 
 #### Component Hierarchy
 
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like.
-
-```structure
+```
 
 src
 |__ assets/
@@ -91,12 +87,6 @@ src
 
 ```
 
-#### Component Tree
-
-> Use this section to include a link to your component tree.
-
-[Component tree](url)
-
 #### Time Estimates
 
 > Use this section to estimate the time necessary to build out each of the components you've described above.
@@ -125,7 +115,7 @@ src
 
 #### ERD Model
 
-![ERD] (https://drive.google.com/file/d/1g0UNskYK6LO7mjwM-IBBSGQFQ2SdZR1c/view?usp=sharing)
+![ERD](https://drive.google.com/file/d/1g0UNskYK6LO7mjwM-IBBSGQFQ2SdZR1c/view?usp=sharing)
 
 <br>
 
