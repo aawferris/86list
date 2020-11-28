@@ -30,29 +30,9 @@
 
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Dummy Link](url)
+![Desktop Figma](https://www.figma.com/file/hhDs0Zzcj7HipqUA3qnL0i/86list?node-id=0%3A1)
 
-- Desktop Landing
-
-![Dummy Link](url)
-
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
+- Desktop, Tablet, and Mobile
 
 #### Component Tree
 
@@ -145,7 +125,7 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+![ERD] (https://drive.google.com/file/d/1g0UNskYK6LO7mjwM-IBBSGQFQ2SdZR1c/view?usp=sharing)
 
 <br>
 
