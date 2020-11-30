@@ -112,7 +112,7 @@ src
 
 #### ERD Model
 
-https://drive.google.com/drive/folders/1S--7pPaJlY2KVtCWv35L0tuRgBYdXdwN
+https://drive.google.com/file/d/1S6sTTIWZM4-rZq8ah-UJLti7qx6Jh6cl/view?usp=sharing
 
 <br>
 
