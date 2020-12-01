@@ -54,12 +54,12 @@ class RestaurantsController < ApplicationController
       @restaurant = Restaurant.find(params[:id])
     end
 
-    # def set_user_food
-    #   @post = @current_user.posts.find(params[:id])
-    # end
+    def set_user_post
+      @post = @current_user.posts.find(params[:id])
+    end
 
-    # Only allow a trusted parameter "white list" through.
-    # def restaurant_params
-    #   params.require(:restaurant).permit(:name, :user_id)
-    # end
+    Only allow a trusted parameter "white list" through.
+    def restaurant_params
+      params.require(:restaurant).permit(:name, :user_id)
+    end
 end
