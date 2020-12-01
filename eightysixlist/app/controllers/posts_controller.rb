@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :authorize_request, only: [:create, :update, :destroy]
   before_action :set_user_post, only: [:update, :destroy]
 
-  # GET /foods
+  # GET /posts
   def index
     @posts = Post.all
 
@@ -17,11 +17,11 @@ class PostsController < ApplicationController
 
   # POST /posts
   def create
-    @post = Post.new(post_params)
+    @post = Post.new(post_create_params)
     @post.user = @current_user
 
     if @post.save
-      render json: @post, status: :created, location: @post
+      render json: @post, status: :created
     else
       render json: @post.errors, status: :unprocessable_entity
     end
@@ -54,12 +54,16 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
     end
 
-    def set_user_food
+    def set_user_post
       @post = @current_user.posts.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def post_params
-      params.require(:post).permit(:name, :user_id)
+      params.require(:post).permit(:title, :content)
+    end
+
+    def post_create_params
+      params.require(:post).permit(:title, :content, :location, :restaurant_id)
     end
 end

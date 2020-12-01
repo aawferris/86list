@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:show, :add_post]
   before_action :authorize_request, only: [:create, :update, :destroy]
-  before_action :set_user_post, only: [:update, :destroy]
+  # before_action :set_user_post, only: [:update, :destroy]
 
   # GET /restaurants
   def index
@@ -28,18 +28,18 @@ class RestaurantsController < ApplicationController
   end
 
   # PATCH/PUT /restaurants/1
-  def update
-    if @restaurant.update(restaurant_params)
-      render json: @restaurant
-    else
-      render json: @restaurant.errors, status: :unprocessable_entity
-    end
-  end
+  # def update
+  #   if @restaurant.update(restaurant_params)
+  #     render json: @restaurant
+  #   else
+  #     render json: @restaurant.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # DELETE /restaurant/1
-  def destroy
-    @restaurant.destroy
-  end
+  # def destroy
+  #   @restaurant.destroy
+  # end
 
   # def add_comment
   #   @comment = Comment.find(params[:comment_id])
