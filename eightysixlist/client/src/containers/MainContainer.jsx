@@ -1,11 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 
-import Posts from '../screens/Posts';
-import RestaurantCreate from '../screens/RestaurantCreate';
-import RestaurantDetail from '../screens/RestaurantDetail';
-import RestaurantEdit from '../screens/RestaurantEdit';
-import Restaurants from '../screens/Restaurants';
+import Posts from '../components/Posts';
+import Restaurants from '../components/Restaurants';
 import { getAllPosts } from '../services/posts'
 import { destroyRestaurant, getAllRestaurants, postRestaurant, putRestaurant } from '../services/restaurants'
 
@@ -20,7 +17,7 @@ export default function MainContainer(props) {
       setPosts(postData);
     }
     const fetchRestaurants = async () => {
-      const restaurantsData = await getAllRestaurants();
+      const restaurantData = await getAllRestaurants();
       setRestaurants(restaurantData);
     }
     fetchPosts();
@@ -29,46 +26,25 @@ export default function MainContainer(props) {
 
   const handleCreate = async (restaurantData) => {
     const newRestaurant = await postRestaurant(restaurantData);
-    setRestaurant(prevState => [...prevState, newRestaurant]);
+    setRestaurants(prevState => [...prevState, newRestaurant]);
     history.push('/restaurants');
   }
 
   const handleUpdate = async (id, restaurantData) => {
     const updatedRestaurant = await putRestaurant(id, restaurantData);
-    setRestaurant(prevState => prevState.map(restaurant => {
+    setRestaurants(prevState => prevState.map(restaurant => {
       return restaurant.id === Number(id) ? updatedRestaurant : restaurant
     }))
     history.push('/restaurants');
   }
 
   const handleDelete = async (id) => {
-    await destroyrestaurant(id);
+    await destroyRestaurant(id);
     setRestaurants(prevState => prevState.filter(restaurant => restaurant.id !== id))
   }
 
   return (
-    <Switch>
-      <Route path='/flavors'>
-        <Flavors flavors={flavors} />
-      </Route>
-      <Route path='/restaurants/:id/edit'>
-        <RestaurantEdit restaurant={restaurants} handleUpdate={handleUpdate} />
-      </Route>
-      <Route path='/restaurant/new'>
-        <RestaurantCreate handleCreate={handleCreate} />
-      </Route>
-      {/* Here, we're adding a route for our single food screen */}
-      {/* we're passing it "flavors" to use in our drop down form */}
-      <Route path='/restaurant/:id'>
-        <RestaurantDetail flavors={flavors} />
-      </Route>
-      <Route path='/restaurant'>
-        <Restaurants
-          restaurant={restaurants}
-          handleDelete={handleDelete}
-          currentUser={props.currentUser}
-        />
-      </Route>
-    </Switch>
+    <p>Main Container</p>
+    
   )
 }
