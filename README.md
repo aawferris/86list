@@ -11,6 +11,7 @@
 - Link Restaurants to Users and Posts to both Users and Restaurants
 - Leverage React.js to create a simple, clean and elegant UI
 
+
 ### Libraries and Dependencies
 
 |     Library     | Description                                              |
