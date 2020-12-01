@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Login.css'
 
 export default function Login(props) {
   const [formData, setFormData] = useState({
@@ -16,31 +17,43 @@ export default function Login(props) {
   }
 
   return (
-    <form onSubmit={(e) => {
-      e.preventDefault();
-      props.handleLogin(formData);
-    }}>
-      <h3>Login</h3>
-      <label>Username:
-        <input
-          type='text'
-          name='username'
-          value={formData.username}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>Password:
-        <input
-          type='password'
-          name='password'
-          value={formData.password}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <Link to='/register'>Register</Link>
-      <button>Submit</button>
-    </form>
+    <div id="login-main-container">
+      <form onSubmit={(e) => {
+        e.preventDefault();
+        props.handleLogin(formData);
+      }}>
+      <div id="login-sub-container">
+        <h3 id="login-title">Login</h3>
+        <div id="username-box">
+          <label id="username-label">Username:
+            <input
+              className="login-input"
+              type='text'
+              name='username'
+              value={formData.username}
+              onChange={handleChange}
+            />
+          </label>
+        </div>
+        <br />
+        <div id="password-box">
+          <label id="password-label">Password:
+            <input
+              className="login-input"
+              type='password'
+              name='password'
+              value={formData.password}
+              onChange={handleChange}
+            />
+          </label>
+        </div>
+        <br />
+        <div id="login-link-boxes">
+          <button id="login-submit">Submit</button>
+          <Link to='/register'><p id="register-link">I don't have an account</p></Link>
+        </div>
+      </div>
+      </form>
+    </div>
   )
 }

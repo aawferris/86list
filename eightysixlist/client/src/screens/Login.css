@@ -1,0 +1,35 @@
+#login-main-container {
+  display: flex;
+  border: 2px solid blue;
+  justify-content: center;
+}
+
+#login-title {
+  font-size: 24px;
+}
+
+#username-box {
+  justify-content: space-between;
+}
+
+#password-label {
+  margin-left: 5px;
+}
+
+#password-box {
+  justify-content: space-between;
+}
+
+.login-input {
+  margin-left: 20px;
+}
+
+#login-link-boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+}
+
+/* #login-submit {
+} */
