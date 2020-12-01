@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  belongs_to :restaurants
+  belongs_to :restaurant
   has_secure_password
 
   validates :username, presence: true, uniqueness: true
