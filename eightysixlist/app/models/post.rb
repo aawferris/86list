@@ -1,3 +1,4 @@
 class Post < ApplicationRecord
-  belongs_to :users, :restaurants
+  belongs_to :user
+  belongs_to :restaurant
 end

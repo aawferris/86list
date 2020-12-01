@@ -1,0 +1,53 @@
+# PROJECT ISSUE TICKET
+
+> Copy and paste the raw MD code of this template, then replace the quote blocks with your detailed, clear descriptions.
+
+## Unexpected Behavior
+
+> I'm not having success with Posting in Postman; I'm sure other pieces of CRUD will also give soem trouble. 
+If I understand it, I think I'm haivng some referencing issues; but I don't know where to keep trying.
+
+## Expected Behavior
+
+> I expected that when I sent a POST request in Postman for a new user, it would return one.
+
+## Reproduce the Error
+
+1) Clone this repo (from develop branch)
+2) Start your rails server (rails s)
+1) Type in http://localhost:3000/users into Postman for a POST request
+2) Add in the body in RAW JSON fromat
+3) Click 'send'
+
+## Documentation
+
+> Include the exact error message, and if helpful, any supplemental documentation, such as screen captures.
+
+```md
+ActiveRecord::AssociationTypeMismatch (Restaurant(#61040) expected, got "TGIF" which is an instance of String(#3500)):
+
+app/controllers/users_controller.rb:16:in `create'
+Started POST "/users" for ::1 at 2020-12-01 10:13:58 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"greenjacket@gmail.com", "username"=>"philmickelson", "password"=>"[FILTERED]"}}
+   (0.3ms)  BEGIN
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  User Exists? (0.8ms)  SELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2  [["username", "philmickelson"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+  User Exists? (1.4ms)  SELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2  [["email", "greenjacket@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `create'
+   (0.2ms)  ROLLBACK
+  ↳ app/controllers/users_controller.rb:18:in `create'
+Completed 422 Unprocessable Entity in 357ms (Views: 0.3ms | ActiveRecord: 7.1ms | Allocations: 11252)
+
+```
+
+## Attempted Resolution
+
+> If you haven't already, **Google your error message now**. See if those error messages return an answer. Include at least 2 resources you've tried to consult such as walk-throughs, stack overflow articles, and other discussion threads related to your error.
+
+```md
+1. https://api.rubyonrails.org/classes/ActiveRecord/AssociationTypeMismatch.html
+2. https://stackoverflow.com/questions/21395970/rails-4-activerecordassociationtypemismatch
+
+```

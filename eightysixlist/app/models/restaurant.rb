@@ -1,3 +1,4 @@
 class Restaurant < ApplicationRecord
-  has_many :users, :posts
+  has_many :users
+  has_many :posts
 end

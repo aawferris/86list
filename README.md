@@ -8,9 +8,9 @@
 
 - Leverage Ruby on Rails for full CRUD
 - Link the backend to Postresql
-- Link Restaurants to Locations, Locations to Employees, Employees to Posts, and Posts to Comments.
+- Link Restaurants to Users and Posts to both Users and Restaurants
 - Leverage React.js to create a simple, clean and elegant UI
-- Allow users to login in order to see their Restaurant > Location
+
 
 ### Libraries and Dependencies
 
@@ -120,6 +120,8 @@ https://drive.google.com/file/d/1S6sTTIWZM4-rZq8ah-UJLti7qx6Jh6cl/view?usp=shari
 
 ## PostMVP
 
+- Allow users to login in order to see only their Restaurant
+- Create the ability to add comments to posts
 - Require authorization for users to access their specific locations
 - Require authorization for users to post and comment
 - Create an admin login to see and manipulate the data for restraunts and locations (for apporval) and users
