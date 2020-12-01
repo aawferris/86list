@@ -3,9 +3,15 @@ import './Register.css'
 
 export default function Register(props) {
   const [formData, setFormData] = useState({
-    username: "",
+    name: "",
+    address: "",
     email: "",
-    password: ""
+    username: "",
+    password: "",
+    phone: "",
+    age: "",
+    restaurant: "",
+    location: ""
   })
 
   const handleChange = (e) => {
@@ -32,6 +38,8 @@ export default function Register(props) {
             name='name'
             value={formData.name}
             onChange={handleChange}
+            autofocus
+            required
           />
        
       </div>
@@ -43,6 +51,7 @@ export default function Register(props) {
             name='address'
             value={formData.address}
             onChange={handleChange}
+            required
           />
         
       </div>
@@ -54,6 +63,7 @@ export default function Register(props) {
             name='email'
             value={formData.email}
             onChange={handleChange}
+            required
           />
         
       </div>
@@ -65,6 +75,7 @@ export default function Register(props) {
             name='username'
             value={formData.username}
             onChange={handleChange}
+            required
           />
         
       </div>
@@ -76,6 +87,7 @@ export default function Register(props) {
             name='password'
             value={formData.password}
             onChange={handleChange}
+            required
           />
         
       </div>
@@ -87,6 +99,7 @@ export default function Register(props) {
             name='password'
             value={formData.password}
             onChange={handleChange}
+            required
           />
         
       </div>
@@ -98,6 +111,7 @@ export default function Register(props) {
             name='phone'
             value={formData.phone}
             onChange={handleChange}
+            required
           />
       </div>
       <div id="age-box">
@@ -108,6 +122,7 @@ export default function Register(props) {
             name='age'
             value={formData.phone}
             onChange={handleChange}
+            required
           />
         
       </div>
@@ -119,6 +134,7 @@ export default function Register(props) {
             name='restaurant'
             value={formData.restaurant}
             onChange={handleChange}
+            required
           />
         
       </div>
@@ -130,9 +146,33 @@ export default function Register(props) {
             name='location'
             value={formData.location}
             onChange={handleChange}
+            required
           />
-        
       </div>
+      <div id="register-terms-box">
+          <label id="terms-label">I agree to the <a>Terms and Conditions</a>:
+            <input
+              className="login-input"
+              type='checkbox'
+              name='terms'
+              // value={formData.password}
+              onChange={handleChange}
+              required
+            />
+          </label>
+        </div>
+        <div id="register-community-box">
+          <label id="community-label">I agree to the <a>Community Guidelines</a>:
+            <input
+              className="login-input"
+              type='checkbox'
+              name='community'
+              // value={formData.password}
+              onChange={handleChange}
+              required
+            />
+          </label>
+        </div>
       <button id="register-submit">Submit</button>
       </div>
     </form>
