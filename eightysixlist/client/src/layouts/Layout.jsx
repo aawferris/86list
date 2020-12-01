@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import Footer from "../components/Footer"
 
 export default function Layout(props) {
   return (
@@ -8,6 +9,7 @@ export default function Layout(props) {
         handleLogout={props.handleLogout}
       />
       {props.children}
+      <Footer />
     </div>
   )
 }
