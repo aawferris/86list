@@ -1,15 +1,22 @@
 #login-main-container {
   display: flex;
-  border: 2px solid blue;
   justify-content: center;
+  text-align: center;
+}
+
+#login-sub-container {
+  margin-top: 20vh;
 }
 
 #login-title {
-  font-size: 24px;
+  font-size: 48px;
+  margin-top: 5vh;
+  color: #ab3320;
 }
 
 #username-box {
   justify-content: space-between;
+  color: #421527;
 }
 
 #password-label {
@@ -18,10 +25,13 @@
 
 #password-box {
   justify-content: space-between;
+  color: #421527;
 }
 
 .login-input {
   margin-left: 20px;
+  color: #341528;
+  font-size: 15px;
 }
 
 #login-link-boxes {
@@ -30,6 +40,3 @@
   align-items: center;
   padding: 15px 0;
 }
-
-/* #login-submit {
-} */
