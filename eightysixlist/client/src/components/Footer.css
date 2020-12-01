@@ -5,3 +5,12 @@
   bottom: 0;
   width: 100vw;
 }
+
+#footer-tag {
+  display: flex;
+  font-size: 9px;
+  font-style: italic;
+  justify-content: flex-end;
+  margin-top: 12vh;
+  margin-right: 1vw;
+}

@@ -18,7 +18,10 @@ export default function Header(props) {
             <button onClick={handleLogout}>Logout</button>
           </>
           :
-          <Link to='/login'><p id="login-link">Login | Register</p></Link>
+          <div id="header-buttons">
+            <Link to='/login'><button id="login-button">LOGIN</button></Link>
+            <Link to='/register'><button id="register-button">REGISTER</button></Link>
+          </div>
       }
       <hr />
       {

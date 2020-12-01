@@ -3,7 +3,9 @@ import './Footer.css'
 
 function Footer(props) {
   return (
-    <div id="footer-container"></div>
+    <div id="footer-container">
+      <p id="footer-tag">Created by Andrew Ferris</p>
+    </div>
   );
 }
 

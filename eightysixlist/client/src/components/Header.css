@@ -34,3 +34,24 @@ a {
 a:visited {
   color: #dd7965;
 }
+
+#header-buttons {
+  display: flex;
+}
+
+#login-button {
+  font-size: 16px;
+  width: 12vw;
+  padding: 1.25vw;
+  margin-right: 1vw;
+  background-color: #dd7965;
+  color: #341528;
+}
+
+#register-button {
+  font-size: 16px;
+  width: 12vw;
+  padding: 1.25vw;
+  background-color: #dd7965;
+  color: #341528;
+}
