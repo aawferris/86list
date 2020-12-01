@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :add_post]
+  # before_action :set_user_post, only: [:show, :add_post]
   before_action :authorize_request, only: [:create, :update, :destroy]
   before_action :set_user_post, only: [:update, :destroy]
 
@@ -12,7 +12,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   def show
-    render json: @post #, include: :flavors
+    render json: @post
   end
 
   # POST /posts
