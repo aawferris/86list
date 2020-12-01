@@ -14,18 +14,15 @@
   color: #ab3320;
 }
 
-#username-box {
+#login-username-box,
+#login-password-box {
   justify-content: space-between;
   color: #421527;
+  font-weight: bolder;
 }
 
 #password-label {
   margin-left: 5px;
-}
-
-#password-box {
-  justify-content: space-between;
-  color: #421527;
 }
 
 .login-input {

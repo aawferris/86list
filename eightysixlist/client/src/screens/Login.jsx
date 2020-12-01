@@ -24,7 +24,7 @@ export default function Login(props) {
       }}>
         <h3 id="login-title">Login</h3>
       <div id="login-sub-container">
-        <div id="username-box">
+        <div id="login-username-box">
           <label id="username-label">Username:
             <input
               className="login-input"
@@ -36,7 +36,7 @@ export default function Login(props) {
           </label>
         </div>
         <br />
-        <div id="password-box">
+        <div id="login-password-box">
           <label id="password-label">Password:
             <input
               className="login-input"

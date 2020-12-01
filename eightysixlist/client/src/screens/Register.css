@@ -1,1 +1,46 @@
+#register-main-container {
+  display: flex;
+  justify-content: center;
+}
 
+#input-main-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+#register-title {
+  font-size: 48px;
+  color: #ab3320;
+  text-align: center;
+}
+
+#name-box,
+#address-box,
+#email-box,
+#username-box,
+#password-box,
+#confirm-box,
+#phone-box,
+#age-box,
+#restaurant-box,
+#location-box {
+  display: flex;
+  width: 50vw;
+  padding: 1.1vh 0;
+  justify-content: space-between;
+  color: #421527;
+  font-weight: bolder;
+}
+
+.register-input {
+  color: #341528;
+  font-size: 15px;
+  width: 30vw;
+}
+
+#register-submit {
+  width: fit-content;
+  font-size: 15px;
+  margin: 25px auto;
+}
