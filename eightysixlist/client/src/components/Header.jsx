@@ -30,7 +30,7 @@ export default function Header(props) {
           <p className="current-user-display">{currentUser}</p> &&
         <>
           <Link to='/restaurants'><p id="header-restaurant-link">restaurants</p></Link>
-          <p>|</p>
+          <p id="header-separator">|</p>
           <Link to='/posts'><p id="header-posts-link">posts</p></Link>
         </>
       }

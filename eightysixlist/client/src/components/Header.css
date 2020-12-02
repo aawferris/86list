@@ -3,6 +3,8 @@
   justify-content: space-between;
   padding: 0 15px 0 15px;
   background-color: #dceacd;
+  height: 12vh;
+  align-items: center;
 }
 
 #header-left {
@@ -43,8 +45,8 @@ a:visited {
 #register-button,
 #logout-button {
   font-size: 16px;
-  width: 12vw;
-  padding: 1.25vw;
+  width: 10vw;
+  padding: 0.5vw;
   margin-right: 1vw;
   background-color: #dd7965;
   color: #341528;
@@ -54,12 +56,12 @@ a:visited {
   color: #341528;
   font-weight: bolder;
   margin-right: 1vw;
+  margin-top: 1.5vh;
 }
 
-#header-restaurant-link {
-  margin-right: 1vw;
-}
-
+#header-restaurant-link,
+#header-separator,
 #header-posts-link {
-  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-top: 1.5vh;
 }
