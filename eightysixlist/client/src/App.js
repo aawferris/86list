@@ -14,9 +14,14 @@ import {
   verifyUser,
 } from "./services/auth";
 import CreatePost from "./screens/CreatePost";
-import { getAllPosts, postPost } from "./services/posts";
-import { getAllUsers } from "./services/users";
-import { getAllRestaurants } from "./services/restaurants";
+import { getAllPosts, postPost, putPost, destroyPost } from "./services/posts";
+import {
+  destroyRestaurant,
+  getAllRestaurants,
+  postRestaurant,
+  putRestaurant,
+} from "./services/restaurants";
+import { getAllUsers, postUser, putUser, destroyUser } from "./services/users";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -52,7 +57,7 @@ function App() {
     history.push("/");
   };
 
-  // Handling CRUD
+  // CRUD HANDLING //
 
   const [users, setUsers] = useState([]);
   const [restaurants, setRestaurants] = useState([]);
@@ -74,10 +79,72 @@ function App() {
     };
   });
 
-  const handleCreate = async (postData) => {
+  // CREATE
+  const handlePostCreate = async (postData) => {
     const newPost = await postPost(postData);
     setPosts((prevState) => [...prevState, newPost]);
     history.push("/posts");
+  };
+
+  const handleRestaurantCreate = async (restaurantData) => {
+    const newRestaurant = await postRestaurant(restaurantData);
+    setRestaurants((prevState) => [...prevState, newRestaurant]);
+    history.push("/restaurants");
+  };
+
+  const handleUserCreate = async (userData) => {
+    const newUser = await postUser(userData);
+    setUsers((prevState) => [...prevState, newUser]);
+    history.push("/users");
+  };
+
+  // UPDATE
+  const handlePostUpdate = async (id, postData) => {
+    const updatedPost = await putPost(id, postData);
+    setPosts((prevState) =>
+      prevState.map((post) => {
+        return post.id === Number(id) ? updatedPost : post;
+      })
+    );
+    history.push("/posts");
+  };
+
+  const handleRestaurantUpdate = async (id, restaurantData) => {
+    const updatedRestaurant = await putRestaurant(id, restaurantData);
+    setRestaurants((prevState) =>
+      prevState.map((restaurant) => {
+        return restaurant.id === Number(id) ? updatedRestaurant : restaurant;
+      })
+    );
+    history.push("/foods");
+  };
+
+  const handleUpdate = async (id, userData) => {
+    const updatedUser = await putUser(id, userData);
+    setUsers((prevState) =>
+      prevState.map((user) => {
+        return user.id === Number(id) ? updatedUser : user;
+      })
+    );
+    history.push("/users");
+  };
+
+  // DESTROY
+  const handlePostDelete = async (id) => {
+    await destroyPost(id);
+    setPosts((prevState) => prevState.filter((post) => post.id !== id));
+  };
+
+  const handleRestaurantDelete = async (id) => {
+    await destroyRestaurant(id);
+    setRestaurants((prevState) =>
+      prevState.filter((restaurant) => restaurant.id !== id)
+    );
+  };
+
+  const handleUserDelete = async (id) => {
+    await destroyUser(id);
+    setUsers((prevState) => prevState.filter((user) => user.id !== id));
   };
 
   return (
