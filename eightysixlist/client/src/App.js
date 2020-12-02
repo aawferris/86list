@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
 
 import "./App.css";
-import MainContainer from "./containers/MainContainer";
+import Home from "./screens/Home";
+import Landing from "./screens/Landing";
 import Layout from "./layouts/Layout";
 import Login from "./screens/Login";
 import Register from "./screens/Register";
@@ -62,7 +63,15 @@ function App() {
 
         <Route path="/">
           {/* container */}
-          <MainContainer currentUser={currentUser} />
+          {currentUser ? (
+            <>
+              <Home currentUser={currentUser} />
+            </>
+          ) : (
+            <>
+              <Landing />
+            </>
+          )}
         </Route>
       </Switch>
     </Layout>
