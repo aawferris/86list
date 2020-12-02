@@ -1,0 +1,39 @@
+#login-main-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#login-sub-container {
+  margin-top: 20vh;
+}
+
+#login-title {
+  font-size: 48px;
+  margin-top: 5vh;
+  color: #ab3320;
+}
+
+#login-username-box,
+#login-password-box {
+  justify-content: space-between;
+  color: #421527;
+  font-weight: bolder;
+}
+
+#password-label {
+  margin-left: 5px;
+}
+
+.login-input {
+  margin-left: 20px;
+  color: #341528;
+  font-size: 15px;
+}
+
+#login-link-boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+}

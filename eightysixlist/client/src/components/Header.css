@@ -1,0 +1,57 @@
+#header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px 0 15px;
+  background-color: #dceacd;
+}
+
+#header-left {
+  display: flex;
+  align-items: center;
+}
+
+#title {
+  align-content: center;
+  color: #341528;
+  margin-left: 10px;
+}
+
+#logo {
+  height: 60px;
+  width: auto;
+}
+
+#header-right {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #dd7965;
+}
+
+a:visited {
+  color: #dd7965;
+}
+
+#header-buttons {
+  display: flex;
+}
+
+#login-button {
+  font-size: 16px;
+  width: 12vw;
+  padding: 1.25vw;
+  margin-right: 1vw;
+  background-color: #dd7965;
+  color: #341528;
+}
+
+#register-button {
+  font-size: 16px;
+  width: 12vw;
+  padding: 1.25vw;
+  background-color: #dd7965;
+  color: #341528;
+}
