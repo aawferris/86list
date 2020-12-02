@@ -25,7 +25,8 @@
 
 #create-title-box,
 #create-content-box,
-#create-image-box {
+#create-image-box,
+#create-restaurant-box {
   display: flex;
   justify-content: space-between;
   padding: 1vh 0;

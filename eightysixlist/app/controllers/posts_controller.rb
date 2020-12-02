@@ -64,6 +64,6 @@ class PostsController < ApplicationController
     end
 
     def post_create_params
-      params.require(:post).permit(:title, :content, :image_url, :restaurant_id)
+      params.require(:post).permit(:title, :content, :image_url, :restaurant_id, :user_id)
     end
 end

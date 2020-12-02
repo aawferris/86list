@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Switch, Route, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
-import Posts from '../components/Posts';
-import Restaurants from '../components/Restaurants';
 import { getAllPosts, postPost, putPost, destroyPost } from '../services/posts'
 import { destroyRestaurant, getAllRestaurants, postRestaurant, putRestaurant } from '../services/restaurants'
 
+import Posts from '../components/Posts'
 import './Landing.css'
 
 export default function MainContainer(props) {
@@ -51,7 +50,7 @@ export default function MainContainer(props) {
       <div id="recent-community-box">
         <h3>Join a Community</h3>
         <div id="community-display-box">
-          {props.community}
+          {props.resturant}
         </div>
       </div>
     </div>

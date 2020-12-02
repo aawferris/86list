@@ -14,14 +14,27 @@ import {
   verifyUser,
 } from "./services/auth";
 import CreatePost from "./screens/CreatePost";
-import { getAllPosts, postPost, putPost, destroyPost } from "./services/posts";
+import {
+  getAllPosts,
+  postPost,
+  putPost,
+  destroyPost,
+  getOnePosts,
+} from "./services/posts";
 import {
   destroyRestaurant,
   getAllRestaurants,
   postRestaurant,
   putRestaurant,
+  getOneRestaurant,
 } from "./services/restaurants";
-import { getAllUsers, postUser, putUser, destroyUser } from "./services/users";
+import {
+  getAllUsers,
+  postUser,
+  putUser,
+  destroyUser,
+  getOneUser,
+} from "./services/users";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -63,7 +76,7 @@ function App() {
   const [restaurants, setRestaurants] = useState([]);
   const [posts, setPosts] = useState([]);
 
-  //GET ALL
+  // GET ALL
   useEffect(() => {
     const fetchPosts = async () => {
       const postData = await getAllPosts();
@@ -75,6 +88,22 @@ function App() {
     };
     const fetchRestaurants = async () => {
       const restaurantData = await getAllRestaurants();
+      setRestaurants(restaurantData);
+    };
+  });
+
+  // GET ONE
+  useEffect(() => {
+    const fetchPost = async () => {
+      const postData = await getOnePosts();
+      setPosts(postData);
+    };
+    const fetchUser = async () => {
+      const userData = await getOneUser();
+      setUsers(userData);
+    };
+    const fetchRestaurant = async () => {
+      const restaurantData = await getOneRestaurant();
       setRestaurants(restaurantData);
     };
   });

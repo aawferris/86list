@@ -87,9 +87,19 @@ function CreatePost(props) {
                 onChange={handleChange}
                 />
               </div>
+            <div id="create-restaurant-box">
+              <input
+                className="create-post-input"
+                type='number'
+                placeholder='restaurant-id'
+                name='restaurant_id'
+                value={post.restaurant_id}
+                onChange={handleChange}
+                />
             </div>
-            <button type="submit" id="create-post-submit-button">Submit</button>
           </div>
+          </div>
+            <button type="submit" id="create-post-submit-button">Submit</button>
         </form>
       </div>
   )
