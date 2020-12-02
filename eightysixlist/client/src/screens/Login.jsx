@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import DisplayPost from '../components/DisplayPost'
 import './Login.css'
 
 export default function Login(props) {
@@ -33,7 +34,7 @@ export default function Login(props) {
               value={formData.username}
               onChange={handleChange}
               required
-              autofocus
+              autoFocus
             />
           </label>
         </div>

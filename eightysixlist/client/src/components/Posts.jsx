@@ -3,7 +3,11 @@ import React from 'react';
 function Posts(props) {
   return (
     <div>
-      <h1>Posts</h1>
+      {
+        props.posts.map(post => (
+          <p key={post.id}>{post.title}</p>
+        ))
+      }
     </div>
   );
 }

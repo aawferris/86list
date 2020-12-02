@@ -38,7 +38,7 @@ export default function Register(props) {
             name='name'
             value={formData.name}
             onChange={handleChange}
-            autofocus
+            autoFocus
             required
           />
        
@@ -120,7 +120,7 @@ export default function Register(props) {
           className="register-input"
             type='number'
             name='age'
-            value={formData.phone}
+            value={formData.age}
             onChange={handleChange}
             required
           />

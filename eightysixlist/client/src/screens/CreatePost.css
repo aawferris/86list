@@ -1,0 +1,49 @@
+#create-post-main-container {
+  display: flex;
+  justify-content: center;
+  height: 65vh;
+}
+
+#create-post-sub-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#create-post-title {
+  font-size: 48px;
+}
+
+#create-post-details-box {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  border: 1px solid black;
+  padding: 1vh 1vw;
+  background-color: #dceacd;
+}
+
+#create-title-box,
+#create-content-box,
+#create-image-box,
+#create-restaurant-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vh 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.create-post-input {
+  width: 40vw;
+  font-size: 16px;
+}
+
+#create-content-input {
+  height: 10vh;
+}
+
+#create-post-submit-button {
+  width: fit-content;
+  margin-top: 1vh;
+}
