@@ -11,15 +11,18 @@ const LessonCard = (props) => {
             <div id="post-card-details">
               <p className="post-attr">Title: {props.title}</p>
               <p className="post-attr">Content: {props.content}</p>
-              <p className="post-attr">Image Link: {props.image_url}</p>
+            <p className="post-attr">{props.image_url}</p>
+            <div id="post-card-bottom">
+              <p id="comment-ternary">Hide | Show Comments</p>
+              <div id="post-card-button-container">
+                <NavLink id="post-card-edit-link" to={`/lessons/${props._id}/edit`}><button id="post-card-edit-button">Edit</button></NavLink>
+                <NavLink id="post-card-delete-link" to={`/lessons/${props._id}/delete`}><button id="post-card-delete-button">Delete</button></NavLink>
+              </div>
+            </div>
             </div>
           </div>
         </div>
       {/* </Link> */}
-      <div className="button-container">
-        <NavLink className="edit-link" to={`/lessons/${props._id}/edit`}><button id="card-edit-button">Edit</button></NavLink>
-        <NavLink className="delete-link" to={`/lessons/${props._id}/delete`}><button id="card-delete-button">Delete</button></NavLink>
-      </div>
     </div>
   );
 };
