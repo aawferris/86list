@@ -14,6 +14,7 @@ import {
   verifyUser,
 } from "./services/auth";
 import CreatePost from "./screens/CreatePost";
+import EditPost from "./screens/EditPost";
 import {
   getAllPosts,
   postPost,
@@ -180,7 +181,7 @@ function App() {
     <Layout currentUser={currentUser} handleLogout={handleLogout}>
       <Switch>
         <Route exact path="/posts/new" component={CreatePost} />
-        {/* <Route exact path="/posts/:id/edit" component={EditPost} /> */}
+        <Route exact path="/posts/:id/edit" component={EditPost} />
 
         <Route path="/login">
           {/* login */}

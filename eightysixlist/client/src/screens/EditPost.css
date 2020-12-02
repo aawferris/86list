@@ -1,0 +1,49 @@
+#edit-post-main-container {
+  display: flex;
+  justify-content: center;
+  height: 65vh;
+}
+
+#edit-post-sub-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#edit-post-title {
+  font-size: 48px;
+}
+
+#edit-post-details-box {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  border: 1px solid black;
+  padding: 1vh 1vw;
+  background-color: #dceacd;
+}
+
+#edit-title-box,
+#edit-content-box,
+#edit-image-box,
+#edit-restaurant-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vh 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.edit-post-input {
+  width: 40vw;
+  font-size: 16px;
+}
+
+#edit-content-input {
+  height: 10vh;
+}
+
+#edit-post-submit-button {
+  width: fit-content;
+  margin-top: 1vh;
+}

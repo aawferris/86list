@@ -39,7 +39,7 @@ const LessonCard = (props) => {
             <div id="post-card-bottom">
               <p id="comment-ternary">Hide | Show Comments</p>
               <div id="post-card-button-container">
-                <NavLink id="post-card-edit-link" to={`/posts/${props.id}`}><button id="post-card-edit-button">Edit</button></NavLink>
+                <NavLink id="post-card-edit-link" to={`/posts/${props.id}/edit`}><button id="post-card-edit-button">Edit</button></NavLink>
                 <button id="post-card-delete-button" onClick={handleShow}>Delete</button>
                 
                 <Modal show={show} onHide={handleClose}>
