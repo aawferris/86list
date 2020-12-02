@@ -6,6 +6,8 @@ import Restaurants from '../components/Restaurants';
 import { getAllPosts } from '../services/posts'
 import { destroyRestaurant, getAllRestaurants, postRestaurant, putRestaurant } from '../services/restaurants'
 
+import './MainContainer.css'
+
 export default function MainContainer(props) {
   const [posts, setPosts] = useState([]); //formerly FLAVORS
   const [restaurants, setRestaurants] = useState([]); //formerly FOODS
@@ -44,7 +46,20 @@ export default function MainContainer(props) {
   }
 
   return (
-    <p>Main Container</p>
+    <div id="main-container-div">
+      <div id="recent-post-box">
+        <h3>Recent Posts</h3>
+        <div id="posts-display-box">
+          {props.posts}
+        </div>
+      </div>
+      <div id="recent-community-box">
+        <h3>Join a Community</h3>
+        <div id="community-display-box">
+          {props.community}
+        </div>
+      </div>
+    </div>
     
   )
 }

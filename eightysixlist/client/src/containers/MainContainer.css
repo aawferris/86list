@@ -1,3 +1,18 @@
-* {
-  background-color: #dceacd;
+#main-container-div {
+  display: flex;
+  justify-content: center;
+}
+
+#recent-post-box,
+#recent-community-box {
+  border: 2px solid black;
+  text-align: center;
+  width: 25vw;
+  margin: 3vw 5vw;
+}
+
+#posts-display-box,
+#community-display-box {
+  display: flex;
+  flex-direction: column;
 }
