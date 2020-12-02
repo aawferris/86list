@@ -39,7 +39,9 @@ a:visited {
   display: flex;
 }
 
-#login-button {
+#login-button,
+#register-button,
+#logout-button {
   font-size: 16px;
   width: 12vw;
   padding: 1.25vw;
@@ -48,10 +50,16 @@ a:visited {
   color: #341528;
 }
 
-#register-button {
-  font-size: 16px;
-  width: 12vw;
-  padding: 1.25vw;
-  background-color: #dd7965;
+.current-user-display {
   color: #341528;
+  font-weight: bolder;
+  margin-right: 1vw;
+}
+
+#header-restaurant-link {
+  margin-right: 1vw;
+}
+
+#header-posts-link {
+  margin-left: 1vw;
 }

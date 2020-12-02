@@ -33,7 +33,7 @@ export default function Login(props) {
               value={formData.username}
               onChange={handleChange}
               required
-              autofocus
+              autoFocus
             />
           </label>
         </div>

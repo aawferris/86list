@@ -38,7 +38,7 @@ export default function Register(props) {
             name='name'
             value={formData.name}
             onChange={handleChange}
-            autofocus
+            autoFocus
             required
           />
        

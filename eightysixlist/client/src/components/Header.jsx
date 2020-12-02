@@ -16,8 +16,8 @@ export default function Header(props) {
       {
         currentUser ?
           <>
-            <p>{currentUser.username}</p>
-            <button onClick={handleLogout}>Logout</button>
+            <p className="current-user-display">Welcome, {currentUser.username}!</p>
+            <button id="logout-button" onClick={handleLogout}>Logout</button>
           </>
           :
           <div id="header-buttons">
@@ -27,10 +27,11 @@ export default function Header(props) {
       }
       <hr />
       {
-        currentUser &&
+          <p className="current-user-display">{currentUser}</p> &&
         <>
-          <Link to='/restaurants'>restaurants</Link>
-          <Link to='/posts'>posts</Link>
+          <Link to='/restaurants'><p id="header-restaurant-link">restaurants</p></Link>
+          <p>|</p>
+          <Link to='/posts'><p id="header-posts-link">posts</p></Link>
         </>
       }
       </div>
