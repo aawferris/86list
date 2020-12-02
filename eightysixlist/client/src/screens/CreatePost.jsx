@@ -42,18 +42,17 @@ function CreatePost(props) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const created = await postPost(post)
-    setCreated({ created })
+    await postPost(post)
+    // setCreated({ created })
     history.push('/posts')
   }
 
   return (
     <div id="create-post-main-container">
-      <form onSubmit={(e) => {
+      <form onSubmit={handleSubmit}
         // e.preventDefault();
         // props.handleCreate(formData);
-        handleSubmit();
-      }}>
+        >
         <div id="create-post-sub-container">
           <h3 id="create-post-title">Create Post</h3>
           <div id="create-post-details-box">
@@ -83,7 +82,7 @@ function CreatePost(props) {
                 className="create-post-input"
                 type='text'
                 placeholder='Image URL'
-                name='image'
+                name='image_url'
                 value={post.image_url}
                 onChange={handleChange}
                 />

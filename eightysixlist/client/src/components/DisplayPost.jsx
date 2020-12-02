@@ -21,7 +21,7 @@ class DisplayPost extends Component {
       .map((post, index) =>
         index < 8 ? (
           <PostCard
-            // _id={lesson._id}
+            id={post.id}
             title={post.title}
             content={post.content}
             image={post.image_url }

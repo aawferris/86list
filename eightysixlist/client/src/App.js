@@ -14,6 +14,9 @@ import {
   verifyUser,
 } from "./services/auth";
 import CreatePost from "./screens/CreatePost";
+import { getAllPosts, postPost } from "./services/posts";
+import { getAllUsers } from "./services/users";
+import { getAllRestaurants } from "./services/restaurants";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -47,6 +50,34 @@ function App() {
     localStorage.removeItem("authToken");
     removeToken();
     history.push("/");
+  };
+
+  // Handling CRUD
+
+  const [users, setUsers] = useState([]);
+  const [restaurants, setRestaurants] = useState([]);
+  const [posts, setPosts] = useState([]);
+
+  //GET ALL
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const postData = await getAllPosts();
+      setPosts(postData);
+    };
+    const fetchUsers = async () => {
+      const userData = await getAllUsers();
+      setUsers(userData);
+    };
+    const fetchRestaurants = async () => {
+      const restaurantData = await getAllRestaurants();
+      setRestaurants(restaurantData);
+    };
+  });
+
+  const handleCreate = async (postData) => {
+    const newPost = await postPost(postData);
+    setPosts((prevState) => [...prevState, newPost]);
+    history.push("/posts");
   };
 
   return (

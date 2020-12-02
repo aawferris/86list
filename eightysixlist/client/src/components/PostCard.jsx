@@ -30,7 +30,6 @@ const LessonCard = (props) => {
 
   return (
     <div id="post-card-main-container">
-      {/* <Link className="card" to={`/posts/${props._id}`}> */}
         <div>
           <div id="post-card-container">
             <div id="post-card-details">
@@ -40,7 +39,7 @@ const LessonCard = (props) => {
             <div id="post-card-bottom">
               <p id="comment-ternary">Hide | Show Comments</p>
               <div id="post-card-button-container">
-                <NavLink id="post-card-edit-link" to={`/posts/${props._id}/edit`}><button id="post-card-edit-button">Edit</button></NavLink>
+                <NavLink id="post-card-edit-link" to={`/posts/${props.id}`}><button id="post-card-edit-button">Edit</button></NavLink>
                 <button id="post-card-delete-button" onClick={handleShow}>Delete</button>
                 
                 <Modal show={show} onHide={handleClose}>
@@ -52,7 +51,7 @@ const LessonCard = (props) => {
                     <Button variant="primary" autoFocus onClick={handleClose}>
                       Close
                     </Button>
-                    <Button variant="danger" onClick={handleDelete}>
+                    <Button variant="danger" onClick={() => handleDelete(props.id)}>
                       Yes, Delete
                     </Button>
                   </Modal.Footer>
@@ -62,7 +61,6 @@ const LessonCard = (props) => {
             </div>
           </div>
         </div>
-      {/* </Link> */}
       </div>
   );
 };
