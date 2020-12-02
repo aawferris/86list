@@ -13,6 +13,7 @@ import {
   removeToken,
   verifyUser,
 } from "./services/auth";
+import CreatePost from "./screens/CreatePost";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -51,6 +52,9 @@ function App() {
   return (
     <Layout currentUser={currentUser} handleLogout={handleLogout}>
       <Switch>
+        <Route exact path="/posts/new" component={CreatePost} />
+        {/* <Route exact path="/posts/:id/edit" component={EditPost} /> */}
+
         <Route path="/login">
           {/* login */}
           <Login handleLogin={handleLogin} />
