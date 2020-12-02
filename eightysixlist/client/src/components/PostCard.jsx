@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import { Modal, Button } from 'react-bootstrap'
-import {destroyPost, putPost } from '../services/posts'
+import { destroyPost, putPost } from '../services/posts'
 import "./PostCard.css";
 
 const LessonCard = (props) => {
@@ -10,6 +10,7 @@ const LessonCard = (props) => {
   const history = useHistory();
 
   const [show, setShow] = useState(false);
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   
@@ -40,24 +41,20 @@ const LessonCard = (props) => {
               <p id="comment-ternary">Hide | Show Comments</p>
               <div id="post-card-button-container">
                 <NavLink id="post-card-edit-link" to={`/posts/${props._id}/edit`}><button id="post-card-edit-button">Edit</button></NavLink>
-                <Button id="bootstrap-delete-button" id="post-card-delete-button" onClick={handleShow}>Delete</Button>
-                <Modal
-                  show={show}
-                  onHide={handleClose}
-                  backdrop="static"
-                  keyboard={false}
-                >
+                <button id="post-card-delete-button" onClick={handleShow}>Delete</button>
+                
+                <Modal show={show} onHide={handleClose}>
                   <Modal.Header closeButton>
-                    <Modal.Title variant="danger">¡Alert!</Modal.Title>
+                    <Modal.Title>¡Alert!</Modal.Title>
                   </Modal.Header>
-                  <Modal.Body>
-                    Are you sure you want to delete this post? You cannot undo this action.
-                  </Modal.Body>
+                  <Modal.Body>Are you sure you want to delete this post? This action cannot be undone.</Modal.Body>
                   <Modal.Footer>
-                    <Button variant="primary" onClick={handleClose}>
-                      Cancel
+                    <Button variant="primary" autoFocus onClick={handleClose}>
+                      Close
                     </Button>
-                    <Button variant="danger" onClick={() => handleDelete(post._id)} >I'm sure</Button>
+                    <Button variant="danger" onClick={handleDelete}>
+                      Yes, Delete
+                    </Button>
                   </Modal.Footer>
                 </Modal>
               </div>
@@ -66,7 +63,7 @@ const LessonCard = (props) => {
           </div>
         </div>
       {/* </Link> */}
-    </div>
+      </div>
   );
 };
 
