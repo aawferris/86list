@@ -1,5 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import DisplayPost from '../components/DisplayPost'
 
 function Home(props) {
   return (
@@ -10,6 +11,7 @@ function Home(props) {
         <Link to="/posts/new"><button id="create-post-button">CREATE POST</button></Link>
       </div>
       <div id="post-card-container">
+        <DisplayPost />
       </div>
     </div>
   );
