@@ -3,6 +3,8 @@ import { useState } from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import { Modal, Button } from 'react-bootstrap'
 import { destroyPost, putPost } from '../services/posts'
+
+import Comments from './Comments'
 import "./PostCard.css";
 
 const LessonCard = (props) => {
@@ -23,6 +25,8 @@ const LessonCard = (props) => {
     history.push('/posts');
   }
 
+  const [showComments, setShowComments] = useState(false)
+
   const handleDelete = async (id) => {
     await destroyPost(id);
     setPost(prevState => prevState.filter(post => post.id !== id))
@@ -37,7 +41,16 @@ const LessonCard = (props) => {
               <p className="post-attr">Content: {props.content}</p>
               <img className="post-attr" src={props.image_url} alt="user-generated image"/>
             <div id="post-card-bottom">
-              <p id="comment-ternary">Hide | Show Comments</p>
+              <button id="comment-ternary"
+                onClick={() => setShowComments(!showComments)}>Hide | Show Comments</button>
+              
+              {showComments ? (
+                <div id="show-comments-box">
+                  <Comments comment={props.post.comment} />
+                </div>
+              ) : (
+                  <div></div>
+              )}
               <div id="post-card-button-container">
                 <NavLink id="post-card-edit-link" to={`/posts/${props.id}/edit`}><button id="post-card-edit-button">Edit</button></NavLink>
                 <button id="post-card-delete-button" onClick={handleShow}>Delete</button>

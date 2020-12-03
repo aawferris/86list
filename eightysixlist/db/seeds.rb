@@ -30,7 +30,7 @@ puts "#{User.count} users created!"
 puts "#{Post.count} posts created!"
 
 # COMMENT SEEDS
-@comment1 = Comment.create!(content: "I couldn't agree more!", post: @post1, restaurant: @restaurant1)
-@comment2 = Comment.create!(content: "I feel so mighty", post: @post3, restaurant: @restaurant1)
+@comment1 = Comment.create!(content: "I couldn't agree more!", post: @post4, restaurant: @restaurant1)
+@comment2 = Comment.create!(content: "I feel so mighty", post: @post4, restaurant: @restaurant1)
 
 puts "#{Comment.count} comments created!"
