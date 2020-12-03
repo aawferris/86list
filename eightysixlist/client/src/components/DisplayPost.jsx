@@ -4,8 +4,8 @@ import { getAllPosts } from "../services/posts";
 import "./DisplayPost.css";
 
 class DisplayPost extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       posts: [],
     };
@@ -18,13 +18,14 @@ class DisplayPost extends Component {
 
   render() {
     const CARDS = this.state.posts
+      .filter(post => this.props.currentUser.restaurant_id === post.restaurant_id)
       .map((post, index) =>
         index < 8 ? (
           <PostCard
             id={post.id}
             title={post.title}
             content={post.content}
-            image={post.image_url }
+            image_url={post.image_url }
             key={index}
           />
         ) : null

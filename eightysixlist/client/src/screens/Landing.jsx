@@ -20,25 +20,6 @@ export default function MainContainer(props) {
     fetchPosts();
   }, [])
 
-  const handleCreate = async (postData) => {
-    const newPost = await postPost(postData);
-    setPosts(prevState => [...prevState, newPost]);
-    history.push('/posts');
-  }
-
-  const handleUpdate = async (id, postData) => {
-    const updatedPost = await putPost(id, postData);
-    setPosts(prevState => prevState.map(post => {
-      return post.id === Number(id) ? updatedPost : post
-    }))
-    history.push('/posts');
-  }
-
-  const handleDelete = async (id) => {
-    await destroyPost(id);
-    setPosts(prevState => prevState.filter(post => post.id !== id))
-  }
-
   return (
     <div id="main-container-div">
       <div id="recent-post-box">
