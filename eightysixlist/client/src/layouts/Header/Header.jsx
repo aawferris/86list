@@ -26,14 +26,6 @@ export default function Header(props) {
           </div>
       }
       <hr />
-      {
-          <p className="current-user-display">{currentUser}</p> &&
-        <>
-          <Link to='/restaurants'><p id="header-restaurant-link">restaurants</p></Link>
-          <p id="header-separator">|</p>
-          <Link to='/posts'><p id="header-posts-link">posts</p></Link>
-        </>
-      }
       </div>
     </div>
   )

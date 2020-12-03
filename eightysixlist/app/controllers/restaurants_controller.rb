@@ -27,27 +27,6 @@ class RestaurantsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /restaurants/1
-  # def update
-  #   if @restaurant.update(restaurant_params)
-  #     render json: @restaurant
-  #   else
-  #     render json: @restaurant.errors, status: :unprocessable_entity
-  #   end
-  # end
-
-  # DELETE /restaurant/1
-  # def destroy
-  #   @restaurant.destroy
-  # end
-
-  # def add_comment
-  #   @comment = Comment.find(params[:comment_id])
-  #   @post.flavors << @comment
-
-  #   render json: @post, include: :comments
-  # end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_restaurant

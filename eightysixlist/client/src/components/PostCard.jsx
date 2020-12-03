@@ -15,6 +15,8 @@ const LessonCard = (props) => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const [refresh, setRefresh] = useState(false)
   
   // Iteration 1 - this will take you to a new screen to edit / Iteration 2 will edit the post right here
   const handleUpdate = async (id, postData) => {
@@ -30,6 +32,7 @@ const LessonCard = (props) => {
   const handleDelete = async (id) => {
     await destroyPost(id);
     setPost(prevState => prevState.filter(post => post.id !== id))
+    // setRefresh(refresh)
   }
 
   return (

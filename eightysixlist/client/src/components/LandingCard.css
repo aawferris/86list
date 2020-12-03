@@ -33,9 +33,9 @@
 }
 
 #landing-post-image {
-  width: 200px;
-  height: auto;
-  max-height: 150px;
+  width: auto;
+  height: 30vh;
+  max-height: 30vh;
   padding-bottom: 2vh;
 }
 
