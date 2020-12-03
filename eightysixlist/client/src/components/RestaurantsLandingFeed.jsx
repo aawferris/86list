@@ -17,6 +17,7 @@ class RestaurantsLandingFeed extends Component {
 
   render() {
     const RESTAURANTCARDS = this.state.restaurants
+      .reverse()
       .map((restaurant, index) =>
         index < 5 ? (
           <RestaurantLandingCard

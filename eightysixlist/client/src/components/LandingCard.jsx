@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { NavLink, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./LandingCard.css";
 
 const LandingCard = (props) => {

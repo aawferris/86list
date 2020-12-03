@@ -17,8 +17,9 @@ class LandingFeed extends Component {
 
   render() {
     const POSTSCARDS = this.state.posts
+      .reverse()
       .map((post, index) =>
-        index < 3 ? (
+        index < 5 ? (
           <LandingCard
             id={post.id}
             title={post.title}

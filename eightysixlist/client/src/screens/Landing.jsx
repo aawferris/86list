@@ -25,7 +25,7 @@ export default function MainContainer(props) {
   return (
     <div id="main-container-div">
       <div id="recent-post-box">
-        <h3>Recent Posts</h3>
+        <h3 id="recent-title">Recent Posts</h3>
         <div id="posts-display-box">
           <LandingFeed />
         </div>

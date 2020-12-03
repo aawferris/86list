@@ -6,7 +6,6 @@
 #restaurant-landing-card-container {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
   box-shadow: 1px 4px 4px 4px #421527;
   width: 38vw;
   height: fit-content;
