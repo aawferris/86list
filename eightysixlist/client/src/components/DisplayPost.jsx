@@ -18,6 +18,7 @@ class DisplayPost extends Component {
   render() {
     const CARDS = this.state.posts
       .filter(post => this.props.currentUser.restaurant_id === post.restaurant_id)
+      .reverse()
       .map((post, index) =>
         index < 8 ? (
           <PostCard

@@ -39,8 +39,9 @@ const LessonCard = (props) => {
           <div id="post-card-details">
             <div id="title-content-box">
               <p className="post-attr">{props.currentuser}</p> {/* Currently not working */}
-              <p className="post-attr">Title: {props.title}</p>
-              <p className="post-attr">Content: {props.content}</p>
+              <p className="post-attr">{props.created_at}</p> {/* Currently not working */}
+              <p className="post-attr" id="home-title">{props.title}</p>
+              <p className="post-attr" id="home-content">{props.content}</p>
             </div>
             <div id="image-container">
               <img className="post-attr" id="post-image" src={props.image_url} alt="user-generated image" />
