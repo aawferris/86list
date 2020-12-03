@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { useHistory, useParams} from 'react-router-dom'
-import { getOnePosts, putPost } from '../services/posts'
+import { getOnePosts, putPost } from '../../services/posts'
 
 import './EditPost.css'
 

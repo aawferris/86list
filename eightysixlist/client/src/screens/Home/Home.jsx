@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import DisplayPost from '../components/DisplayPost'
+import DisplayPost from '../../components/DisplayPost'
 import './Home.css'
 
 function Home(props) {

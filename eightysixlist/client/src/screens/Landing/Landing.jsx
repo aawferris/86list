@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import LandingFeed from '../../components/LandingCard/LandingCard'
+import { getAllPosts } from '../../services/posts'
+// import { destroyRestaurant, getAllRestaurants, postRestaurant, putRestaurant } from '../services/restaurants'
 
-import { getAllPosts, postPost, putPost, destroyPost } from '../services/posts'
-import { destroyRestaurant, getAllRestaurants, postRestaurant, putRestaurant } from '../services/restaurants'
-
-import Posts from '../components/Posts'
 import './Landing.css'
 
 export default function MainContainer(props) {
@@ -25,7 +24,7 @@ export default function MainContainer(props) {
       <div id="recent-post-box">
         <h3>Recent Posts</h3>
         <div id="posts-display-box">
-          {props.posts}
+          <LandingFeed />
         </div>
       </div>
       <div id="recent-community-box">

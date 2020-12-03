@@ -7,7 +7,7 @@
 #recent-post-box {
   display: flex;
   flex-direction: column;
-  width: 30vw;
+  width: 40vw;
   text-align: center;
   margin-top: 5vh;
   border: 1px solid black;
@@ -16,7 +16,7 @@
 #recent-community-box {
   display: flex;
   flex-direction: column;
-  width: 30vw;
+  width: 40vw;
   text-align: center;
   margin-top: 5vh;
   border: 1px solid black;

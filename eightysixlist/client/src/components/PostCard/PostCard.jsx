@@ -2,10 +2,10 @@ import React from "react";
 import { useState } from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import { Modal, Button } from 'react-bootstrap'
-import { destroyPost, putPost } from '../services/posts'
+import { destroyPost, putPost } from '../../services/posts'
 
-import Comments from './Comments'
-import "./PostCard.css";
+import Comments from '../Comments/Comments'
+import "../PostCard/PostCard.css";
 
 const LessonCard = (props) => {
   const [post, setPost] = useState([])
@@ -36,17 +36,22 @@ const LessonCard = (props) => {
     <div id="post-card-main-container">
         <div>
           <div id="post-card-container">
-            <div id="post-card-details">
+          <div id="post-card-details">
+            <div id="title-content-box">
+              <p className="post-attr">{props.currentuser}</p> {/* Currently not working */}
               <p className="post-attr">Title: {props.title}</p>
               <p className="post-attr">Content: {props.content}</p>
-              <img className="post-attr" src={props.image_url} alt="user-generated image"/>
+            </div>
+            <div id="image-container">
+              <img className="post-attr" id="post-image" src={props.image_url} alt="user-generated image" />
+            </div>
             <div id="post-card-bottom">
               <button id="comment-ternary"
                 onClick={() => setShowComments(!showComments)}>Hide | Show Comments</button>
               
               {showComments ? (
                 <div id="show-comments-box">
-                  <Comments comment={props.post.comment} />
+                  <Comments comment={post.comment} />
                 </div>
               ) : (
                   <div></div>

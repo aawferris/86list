@@ -1,5 +1,5 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer"
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer"
 
 export default function Layout(props) {
   return (
@@ -9,7 +9,7 @@ export default function Layout(props) {
         handleLogout={props.handleLogout}
       />
       {props.children}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

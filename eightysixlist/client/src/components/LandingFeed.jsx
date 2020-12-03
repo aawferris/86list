@@ -1,26 +1,31 @@
 import React, { Component } from "react";
-import PostCard from "../components/PostCard/PostCard"
+import PostCard from "./PostCard";
 import { getAllPosts } from "../services/posts";
+import { getAllRestaurants} from "../services/restaurants"
+import LandingCard from "./LandingCard";
+// import "./LandingFeed.css";
 
-class DisplayPost extends Component {
+class LandingFeed extends Component {
   constructor(props) {
     super(props);
     this.state = {
       posts: [],
+      restaurants: []
     };
   }
 
   async componentDidMount() {
     const posts = await getAllPosts();
+    const restaurants = await getAllRestaurants()
     this.setState({ posts });
+    this.setState({ restaurants }) 
   }
 
   render() {
     const CARDS = this.state.posts
-      .filter(post => this.props.currentUser.restaurant_id === post.restaurant_id)
       .map((post, index) =>
-        index < 8 ? (
-          <PostCard
+        index < 3 ? (
+          <LandingCard
             id={post.id}
             title={post.title}
             content={post.content}
@@ -38,4 +43,4 @@ class DisplayPost extends Component {
   }
 }
 
-export default DisplayPost;
+export default LandingFeed;
