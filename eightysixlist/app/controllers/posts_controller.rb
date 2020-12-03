@@ -43,7 +43,7 @@ class PostsController < ApplicationController
 
   def add_comment
     @comment = Comment.find(params[:comment_id])
-    @post.flavors << @comment
+    @post.comments << @comment
 
     render json: @post, include: :comments
   end
