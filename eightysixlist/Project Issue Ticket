@@ -4,21 +4,20 @@
 
 ## Unexpected Behavior
 
-> I'm not having success with Posting in Postman; I'm sure other pieces of CRUD will also give soem trouble. 
-If I understand it, I think I'm haivng some referencing issues; but I don't know where to keep trying.
+> I'm stuck on getting comments to render
 
 ## Expected Behavior
 
-> I expected that when I sent a POST request in Postman for a new user, it would return one.
+> I want to have comments (at least from the seed data) showing up
 
 ## Reproduce the Error
 
 1) Clone this repo (from develop branch)
 2) Start your rails server (rails s)
 3) Run npm run start
-4) Navigate to login (use "admin" and "123456" for credentials)
-5) Click "delete" on one of the posts
-6) Nothing actualyl deletes
+4) Navigate to login (use "chrishaar" and "123456" for credentials)
+5) Click "Hide | Show Comments"
+6) Nothing happens
 
 ## Documentation
 
@@ -33,8 +32,7 @@ If I understand it, I think I'm haivng some referencing issues; but I don't know
 > If you haven't already, **Google your error message now**. See if those error messages return an answer. Include at least 2 resources you've tried to consult such as walk-throughs, stack overflow articles, and other discussion threads related to your error.
 
 ```md
-1. https://www.digitalocean.com/community/tutorials/how-to-set-up-a-ruby-on-rails-project-with-a-react-frontend#step-8-%E2%80%94-creating-recipes
-2. https://cognitiveclass.ai/blog/react-on-rails-tutorial-integrating-react-and-ruby-on-rails
-3. https://www.pluralsight.com/guides/building-a-crud-interface-with-react-and-ruby-on-rails
+1. https://stackoverflow.com/questions/50545259/ruby-on-rails-adding-comments-to-a-post
+2. https://stackoverflow.com/questions/34757168/ruby-on-rails-adding-comments-to-post
 
 ```
