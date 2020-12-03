@@ -8,7 +8,8 @@ function EditPost(props) {
   const [post, setPost] = useState({
     title: '',
     content: '',
-    iamge_url: ''
+    image_url: '',
+    restaurant_id: ''
   });
   const history = useHistory();
 
@@ -75,13 +76,13 @@ function EditPost(props) {
                 />
             </div>
             <div id="edit-restaurant-box">
-              <input
+              {/* <input
                 className="edit-post-input"
                 type='number'
                 name='restaurant_id'
                 value={post.restaurant_id}
                 onChange={handleChange}
-                />
+                /> */}
             </div>
             </div>
             <button type="submit" id="edit-post-submit-button">Submit</button>

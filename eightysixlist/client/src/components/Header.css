@@ -5,6 +5,8 @@
   background-color: #dceacd;
   height: 12vh;
   align-items: center;
+  margin-bottom: 4vh;
+  box-shadow: 2px 3px 8px 8px #341528;
 }
 
 #header-left {
@@ -16,6 +18,7 @@
   align-content: center;
   color: #341528;
   margin-left: 10px;
+  text-decoration: none;
 }
 
 #logo {

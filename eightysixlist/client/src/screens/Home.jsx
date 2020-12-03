@@ -12,7 +12,7 @@ function Home(props) {
         <Link to="/posts/new"><button id="create-post-button">CREATE POST</button></Link>
       </div>
       <div id="post-card-container">
-        <DisplayPost />
+        <DisplayPost currentUser={props.currentUser}/>
       </div>
     </div>
   );

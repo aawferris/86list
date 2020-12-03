@@ -16,7 +16,7 @@ export default function Header(props) {
       {
         currentUser ?
           <>
-            <p className="current-user-display">Welcome, {currentUser.username}!</p>
+            <p className="current-user-display">Welcome, {currentUser.name}!</p>
             <button id="logout-button" onClick={handleLogout}>Logout</button>
           </>
           :

@@ -35,7 +35,7 @@ const LessonCard = (props) => {
             <div id="post-card-details">
               <p className="post-attr">Title: {props.title}</p>
               <p className="post-attr">Content: {props.content}</p>
-            <p className="post-attr">{props.image_url}</p>
+              <img className="post-attr" src={props.image_url} alt="user-generated image"/>
             <div id="post-card-bottom">
               <p id="comment-ternary">Hide | Show Comments</p>
               <div id="post-card-button-container">
