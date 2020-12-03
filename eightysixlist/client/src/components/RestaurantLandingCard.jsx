@@ -13,8 +13,8 @@ const RestaurantLandingCard = (props) => {
     <div id="restaurant-landing-card-main-container">
         <div>
           <div id="restaurant-landing-card-container">
-            <p className="post-attr">{props.name}</p>
-            <p className="post-attr">{props.city}, {props.state}</p>
+            <p className="post-attr" id="landing-restaurant">{props.name}</p>
+            <p className="post-attr" id="landing-city-state">{props.city}, {props.state}</p>
           </div>
         </div>
       </div>

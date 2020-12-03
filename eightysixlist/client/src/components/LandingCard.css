@@ -21,6 +21,17 @@
   padding: 0 1vw;
 }
 
+#landing-title {
+  font-size: 3vh;
+  text-align: left;
+}
+
+#landing-content {
+  font-size: 2vh;
+  text-align: left;
+  font-weight: normal;
+}
+
 #landing-post-image {
   width: 200px;
   height: auto;

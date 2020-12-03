@@ -12,6 +12,17 @@
   margin: 1vw 0;
 }
 
+#landing-restaurant {
+  font-size: 3vh;
+  color: #dd7965;
+}
+
+#landing-city-state {
+  font-size: 2vh;
+  font-weight: normal;
+  color: #421527;
+}
+
 .post-attr {
   font-weight: bold;
   padding: 0 1vw;

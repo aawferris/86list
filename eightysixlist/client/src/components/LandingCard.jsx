@@ -16,8 +16,8 @@ const LandingCard = (props) => {
           <div id="landing-card-details">
             <div id="landing-title-content-box">
               <p className="post-attr">{props.currentuser}</p> {/* Currently not working */}
-              <p className="post-attr">Title: {props.title}</p>
-              <p className="post-attr">Content: {props.content}</p>
+              <p className="post-attr" id="landing-title">{props.title}</p>
+              <p className="post-attr" id="landing-content">{props.content}</p>
             </div>
             <div id="landing-image-container">
               <img className="post-attr" id="landing-post-image" src={props.image_url} alt="user-generated image" />
