@@ -25,6 +25,7 @@
 
 #home-title {
   font-size: 2.25vh;
+  color: #ab3320;
 }
 
 #home-content {
@@ -41,6 +42,7 @@
   width: auto;
   height: 30vh;
   max-height: 30vh;
+  max-width: 40vw;
   margin-bottom: 2vh;
 }
 

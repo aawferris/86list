@@ -10,6 +10,7 @@ function CreatePost(props) {
     content: '',
     image_url: '',
   });
+  
   const [isCreated, setCreated] = useState(false)
   const history = useHistory();
 

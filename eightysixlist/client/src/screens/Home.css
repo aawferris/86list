@@ -5,12 +5,12 @@
 }
 
 #home-title {
-  font-size: 48px;
+  font-size: 7vh;
 }
 
 #create-post-button {
-  font-size: 16px;
-  width: 10vw;
+  font-size: 2vh;
+  width: fit-content;
   padding: 0.5vw;
   margin: 0 0.5vw 1.5vh 0.5vw;
   background-color: #dd7965;
