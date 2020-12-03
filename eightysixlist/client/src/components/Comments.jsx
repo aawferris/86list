@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { getAllComments } from '../../services/comments'
+import { getAllComments } from '../services/comments'
 
 class Comments extends Component {
   constructor(props) {

@@ -2,19 +2,19 @@ import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
 
 import "./App.css";
-import Home from "./screens/Home/Home";
-import Landing from "./screens/Landing/Landing";
+import Home from "./screens/Home";
+import Landing from "./screens/Landing";
 import Layout from "./layouts/Layout/Layout";
-import Login from "./screens/Login/Login";
-import Register from "./screens/Register/Register";
+import Login from "./screens/Login";
+import Register from "./screens/Register";
 import {
   loginUser,
   registerUser,
   removeToken,
   verifyUser,
 } from "./services/auth";
-import CreatePost from "./screens/CreatePost/CreatePost";
-import EditPost from "./screens/EditPost/EditPost";
+import CreatePost from "./screens/CreatePost";
+import EditPost from "./screens/EditPost";
 import {
   getAllPosts,
   postPost,

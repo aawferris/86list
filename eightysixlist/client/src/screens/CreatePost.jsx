@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { useHistory} from 'react-router-dom'
-import { postPost } from '../../services/posts'
+import { postPost } from '../services/posts'
 
 import './CreatePost.css'
 

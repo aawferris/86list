@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import LandingFeed from '../../components/LandingCard/LandingCard'
-import { getAllPosts } from '../../services/posts'
+import LandingFeed from '../components/LandingCard'
+import { getAllPosts } from '../services/posts'
 // import { destroyRestaurant, getAllRestaurants, postRestaurant, putRestaurant } from '../services/restaurants'
 
 import './Landing.css'

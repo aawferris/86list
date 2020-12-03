@@ -22,7 +22,7 @@ class LandingFeed extends Component {
   }
 
   render() {
-    const CARDS = this.state.posts
+    const POSTSCARDS = this.state.posts
       .map((post, index) =>
         index < 3 ? (
           <LandingCard
@@ -37,7 +37,7 @@ class LandingFeed extends Component {
 
     return (
       <div className="post-cards">
-        <div className="cards">{CARDS}</div>
+        <div className="cards">{POSTSCARDS}</div>
       </div>
     );
   }

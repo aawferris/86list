@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PostCard from "../components/PostCard/PostCard"
+import PostCard from './PostCard'
 import { getAllPosts } from "../services/posts";
 
 class DisplayPost extends Component {

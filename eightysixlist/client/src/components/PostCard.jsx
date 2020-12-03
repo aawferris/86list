@@ -2,10 +2,10 @@ import React from "react";
 import { useState } from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import { Modal, Button } from 'react-bootstrap'
-import { destroyPost, putPost } from '../../services/posts'
+import { destroyPost, putPost } from '../services/posts'
 
-import Comments from '../Comments/Comments'
-import "../PostCard/PostCard.css";
+import Comments from './Comments'
+import "./PostCard.css";
 
 const LessonCard = (props) => {
   const [post, setPost] = useState([])
