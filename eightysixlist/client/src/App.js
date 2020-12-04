@@ -4,7 +4,7 @@ import { Switch, Route, useHistory } from "react-router-dom";
 import "./App.css";
 import Home from "./screens/Home";
 import Landing from "./screens/Landing";
-import Layout from "./layouts/Layout";
+import Layout from "./layouts/Layout/Layout";
 import Login from "./screens/Login";
 import Register from "./screens/Register";
 import {

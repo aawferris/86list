@@ -3,9 +3,12 @@ import { useState } from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import { Modal, Button } from 'react-bootstrap'
 import { destroyPost, putPost } from '../services/posts'
+
+import DisplayComments from './DisplayComments'
 import "./PostCard.css";
 
-const LessonCard = (props) => {
+const PostCard = (props) => {
+  console.log(props);
   const [post, setPost] = useState([])
   const history = useHistory();
 
@@ -13,6 +16,8 @@ const LessonCard = (props) => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const [refresh, setRefresh] = useState(false)
   
   // Iteration 1 - this will take you to a new screen to edit / Iteration 2 will edit the post right here
   const handleUpdate = async (id, postData) => {
@@ -23,23 +28,43 @@ const LessonCard = (props) => {
     history.push('/posts');
   }
 
+  const [showComments, setShowComments] = useState(false)
+
   const handleDelete = async (id) => {
     await destroyPost(id);
     setPost(prevState => prevState.filter(post => post.id !== id))
   }
 
   return (
-    <div id="post-card-main-container">
-        <div>
-          <div id="post-card-container">
-            <div id="post-card-details">
-              <p className="post-attr">Title: {props.title}</p>
-              <p className="post-attr">Content: {props.content}</p>
-              <img className="post-attr" src={props.image_url} alt="user-generated image"/>
+      <div id="post-card-main-container">
+        <div id="post-card-container">
+          <div id="post-card-details">
+            <div id="title-content-box">
+              <p className="post-attr">{props.currentUser.username}</p> {/* CURRENTLY SHOWS THE CURRENT USER -- NOT THE USER WHO MADE IT */}
+            <p className="post-attr">{props.created_at}</p>
+              <p className="post-attr" id="home-title">{props.title}</p>
+              <p className="post-attr" id="home-content">{props.content}</p>
+            </div>
+            <div id="image-container">
+              <img className="post-attr" id="post-image" src={props.image_url} alt="user-generated image" />
+            </div>
             <div id="post-card-bottom">
-              <p id="comment-ternary">Hide | Show Comments</p>
+              <button id="comment-ternary"
+                onClick={() => setShowComments(!showComments)}>Hide | Show Comments</button>
+              {showComments ? (
+                <div id="show-comments-box">
+                  <DisplayComments comments={props.comments} currentUser={props.currentUser} />
+                </div>
+              ) : (
+                  null
+                )}
+              {/* CURRENTLY, THIS JUST DOESN'T SHOW ANYTHING */}
+            {/* {props.currentUser.id !== post.user_id ?
+              <div></div>
+              : */}
+
               <div id="post-card-button-container">
-                <NavLink id="post-card-edit-link" to={`/posts/${props.id}/edit`}><button id="post-card-edit-button">Edit</button></NavLink>
+                <NavLink id="post-card-edit-link" to={`/posts/${props.post_id}/edit`}><button id="post-card-edit-button">Edit</button></NavLink>
                 <button id="post-card-delete-button" onClick={handleShow}>Delete</button>
                 
                 <Modal show={show} onHide={handleClose}>
@@ -51,18 +76,18 @@ const LessonCard = (props) => {
                     <Button variant="primary" autoFocus onClick={handleClose}>
                       Close
                     </Button>
-                    <Button variant="danger" onClick={() => handleDelete(props.id)}>
+                    <Button variant="danger" onClick={() => handleDelete(props.post_id)}>
                       Yes, Delete
                     </Button>
                   </Modal.Footer>
                 </Modal>
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  );
+                
+              </div> {/* THE } for the TERNARY GOES HERE post-card-button-container */} 
+            </div> {/* post-card-bottom */}
+          </div> {/* post-card-details */}
+        </div> {/* post-card-container */}
+    </div> // post-card-main-container 
+  )
 };
 
-export default LessonCard;
+export default PostCard;

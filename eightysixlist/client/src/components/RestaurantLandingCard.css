@@ -1,0 +1,29 @@
+#restaurant-landing-card-main-container {
+  display: flex;
+  justify-content: center;
+}
+
+#restaurant-landing-card-container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 4px 4px 4px #421527;
+  width: 38vw;
+  height: fit-content;
+  margin: 1vw 0;
+}
+
+#landing-restaurant {
+  font-size: 3vh;
+  color: #dd7965;
+}
+
+#landing-city-state {
+  font-size: 2vh;
+  font-weight: normal;
+  color: #421527;
+}
+
+.post-attr {
+  font-weight: bold;
+  padding: 0 1vw;
+}

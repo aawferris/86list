@@ -75,15 +75,6 @@ function EditPost(props) {
                 onChange={handleChange}
                 />
             </div>
-            <div id="edit-restaurant-box">
-              {/* <input
-                className="edit-post-input"
-                type='number'
-                name='restaurant_id'
-                value={post.restaurant_id}
-                onChange={handleChange}
-                /> */}
-            </div>
             </div>
             <button type="submit" id="edit-post-submit-button">Submit</button>
           </div>

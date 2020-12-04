@@ -1,23 +1,27 @@
 #main-container-div {
   display: flex;
   justify-content: space-evenly;
-  height: 65vh;
+  height: 80vh;
+}
+
+#recent-title {
+  margin-bottom: 2vh;
 }
 
 #recent-post-box {
   display: flex;
   flex-direction: column;
-  width: 30vw;
+  width: 40vw;
+  height: fit-content;
   text-align: center;
   margin-top: 5vh;
-  border: 1px solid black;
 }
 
 #recent-community-box {
   display: flex;
   flex-direction: column;
-  width: 30vw;
+  width: 40vw;
+  height: fit-content;
   text-align: center;
   margin-top: 5vh;
-  border: 1px solid black;
 }

@@ -1,0 +1,47 @@
+#landing-card-main-container {
+  display: flex;
+  justify-content: center;
+}
+
+#landing-card-container {
+  display: flex;
+}
+
+#landing-card-details {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 4px 4px 4px #421527;
+  width: 38vw;
+  height: fit-content;
+  margin: 1vw 0;
+}
+
+.post-attr {
+  font-weight: bold;
+  padding: 0 1vw;
+}
+
+#landing-title {
+  font-size: 3vh;
+  text-align: left;
+}
+
+#landing-content {
+  font-size: 2vh;
+  text-align: left;
+  font-weight: normal;
+}
+
+#landing-post-image {
+  width: auto;
+  height: 30vh;
+  max-height: 30vh;
+  padding-bottom: 2vh;
+}
+
+#landing-card-bottom {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 1vw;
+}
