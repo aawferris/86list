@@ -3,6 +3,7 @@ import { useState } from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import { Modal, Button } from 'react-bootstrap'
 import { destroyPost, putPost } from '../services/posts'
+import { postComment } from '../services/comments'
 
 import DisplayComments from './DisplayComments'
 import "./PostCard.css";
@@ -24,15 +25,6 @@ const PostCard = (props) => {
     user_id: '',
     post_id: ''
   });
-  
-  // Iteration 1 - this will take you to a new screen to edit / Iteration 2 will edit the post right here
-  const handleUpdate = async (id, postData) => {
-    const updatedPost = await putPost(id, postData);
-    setPost(prevState => prevState.map(post => {
-      return post.id === Number(id) ? updatedPost : post
-    }))
-    history.push('/posts');
-  }
 
   const [showComments, setShowComments] = useState(false)
 
@@ -47,6 +39,12 @@ const PostCard = (props) => {
       ...comment,
       [name]: value
     });
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    await postComment(comment)
+    history.push('/posts')
   }
 
   return (
@@ -86,7 +84,7 @@ const PostCard = (props) => {
                     onClick={() => setShowComments(!showComments)}>Hide | Show Comments</button>
                   {showComments ? (
                     <div id="show-comments-box">
-                      <form id="new-comment-form">
+                      <form id="new-comment-form" onSubmit={handleSubmit}>
                   <input
                     className="create-post-input"
                     id="new-comment"

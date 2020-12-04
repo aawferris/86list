@@ -16,20 +16,21 @@
   margin: 1vw 0;
   text-align: center;
   align-items: center;
+  background-color: #fff;
 }
 
 .post-attr {
-  font-weight: bold;
   padding: 0 1vw;
 }
 
 #home-title {
-  font-size: 2.25vh;
+  font-size: 1.25vh;
+  font-weight: bolder;
   color: #ab3320;
 }
 
 #home-content {
-  font-size: 2vh;
+  font-size: 1.25vh;
 }
 
 #comment-ternary {
