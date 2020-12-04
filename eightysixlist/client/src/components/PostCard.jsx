@@ -49,20 +49,6 @@ const PostCard = (props) => {
               <img className="post-attr" id="post-image" src={props.image_url} alt="user-generated image" />
             </div>
             <div id="post-card-bottom">
-              <button id="comment-ternary"
-                onClick={() => setShowComments(!showComments)}>Hide | Show Comments</button>
-              {showComments ? (
-                <div id="show-comments-box">
-                  <DisplayComments comments={props.comments} currentUser={props.currentUser} />
-                </div>
-              ) : (
-                  null
-                )}
-              {/* CURRENTLY, THIS JUST DOESN'T SHOW ANYTHING */}
-            {/* {props.currentUser.id !== post.user_id ?
-              <div></div>
-              : */}
-
               <div id="post-card-button-container">
                 <NavLink id="post-card-edit-link" to={`/posts/${props.post_id}/edit`}><button id="post-card-edit-button">Edit</button></NavLink>
                 <button id="post-card-delete-button" onClick={handleShow}>Delete</button>
@@ -81,8 +67,16 @@ const PostCard = (props) => {
                     </Button>
                   </Modal.Footer>
                 </Modal>
-                
               </div> {/* THE } for the TERNARY GOES HERE post-card-button-container */} 
+                <button id="comment-ternary"
+                    onClick={() => setShowComments(!showComments)}>Hide | Show Comments</button>
+                  {showComments ? (
+                    <div id="show-comments-box">
+                      <DisplayComments comments={props.comments} currentUser={props.currentUser} />
+                    </div>
+                  ) : (
+                      null
+                    )}
             </div> {/* post-card-bottom */}
           </div> {/* post-card-details */}
         </div> {/* post-card-container */}
