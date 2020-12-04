@@ -9,7 +9,7 @@ export default function Header(props) {
       <Link to="/">
         <div id="header-left">
         <img id="logo" src="/assets/86list-logo.png" alt="the iconic 86list image"/>
-        <h1 id="title">86list</h1>
+        {/* <h1 id="title">86list</h1> */}
       </div>
       </Link>
       <div id="header-right">

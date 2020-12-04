@@ -22,7 +22,10 @@ class DisplayPost extends Component {
       .map((post, index) =>
         index < 8 ? (
           <PostCard
-            id={post.id}
+            currentUser={this.props.currentUser}
+            user_id={this.props.user_id}
+            created_at={post.created_at}
+            post_id={post.id}
             title={post.title}
             content={post.content}
             image_url={post.image_url }

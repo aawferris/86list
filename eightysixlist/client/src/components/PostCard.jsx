@@ -8,6 +8,7 @@ import Comments from './Comments'
 import "./PostCard.css";
 
 const LessonCard = (props) => {
+  console.log(props);
   const [post, setPost] = useState([])
   const history = useHistory();
 
@@ -35,14 +36,27 @@ const LessonCard = (props) => {
     // setRefresh(refresh)
   }
 
+  const dateOptions = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  }
+  const timeOptions = {
+    timeZone:"Africa/Accra",
+    hour12 : true,
+    hour:  "2-digit",
+    minute: "2-digit",
+    second: "2-digit"
+ };
+
   return (
-    <div id="post-card-main-container">
-        <div>
-          <div id="post-card-container">
+      <div id="post-card-main-container">
+        <div id="post-card-container">
           <div id="post-card-details">
             <div id="title-content-box">
-              <p className="post-attr">{props.currentuser}</p> {/* Currently not working */}
-              <p className="post-attr">{props.created_at}</p> {/* Currently not working */}
+              <p className="post-attr">{props.currentUser.username}</p> {/* CURRENTLY SHOWS THE CURRENT USER -- NOT THE USER WHO MADE IT */}
+            <p className="post-attr">{props.created_at}</p>
               <p className="post-attr" id="home-title">{props.title}</p>
               <p className="post-attr" id="home-content">{props.content}</p>
             </div>
@@ -52,14 +66,18 @@ const LessonCard = (props) => {
             <div id="post-card-bottom">
               <button id="comment-ternary"
                 onClick={() => setShowComments(!showComments)}>Hide | Show Comments</button>
-              
               {showComments ? (
                 <div id="show-comments-box">
                   <Comments comment={post.comment} />
                 </div>
               ) : (
-                  <div></div>
-              )}
+                  null
+                )}
+              {/* CURRENTLY, THIS JUST DOESN'T SHOW ANYTHING */}
+            {/* {props.currentUser.id !== post.user_id ?
+              <div></div>
+              : */}
+
               <div id="post-card-button-container">
                 <NavLink id="post-card-edit-link" to={`/posts/${props.id}/edit`}><button id="post-card-edit-button">Edit</button></NavLink>
                 <button id="post-card-delete-button" onClick={handleShow}>Delete</button>
@@ -73,18 +91,18 @@ const LessonCard = (props) => {
                     <Button variant="primary" autoFocus onClick={handleClose}>
                       Close
                     </Button>
-                    <Button variant="danger" onClick={() => handleDelete(props.id)}>
+                    <Button variant="danger" onClick={() => handleDelete(post.id)}>
                       Yes, Delete
                     </Button>
                   </Modal.Footer>
                 </Modal>
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  );
+                
+              </div> {/* THE } for the TERNARY GOES HERE post-card-button-container */} 
+            </div> {/* post-card-bottom */}
+          </div> {/* post-card-details */}
+        </div> {/* post-card-container */}
+    </div> // post-card-main-container 
+  )
 };
 
 export default LessonCard;
