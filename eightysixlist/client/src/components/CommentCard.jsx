@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-import "./PostCard.css";
+import "./CommentCard.css";
 
 const CommentCard = (props) => {
   console.log(props);
@@ -13,8 +13,8 @@ const CommentCard = (props) => {
   return (
       <div id="comment-card-main-container">
         <div id="comment-card-container">
-            <p className="post-attr">{props.user}</p>
-              <p className="post-attr" id="home-content">{props.content}</p>
+            <p>{props.user}</p>
+            <p id="home-content">{props.content}</p>
         </div> {/* comment-card-container */}
     </div> // comment-card-main-container 
   )
