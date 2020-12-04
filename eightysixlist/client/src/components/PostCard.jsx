@@ -18,6 +18,12 @@ const PostCard = (props) => {
   const handleShow = () => setShow(true);
 
   const [refresh, setRefresh] = useState(false)
+
+  const [comment, setComment] = useState({
+    content: '',
+    user_id: '',
+    post_id: ''
+  });
   
   // Iteration 1 - this will take you to a new screen to edit / Iteration 2 will edit the post right here
   const handleUpdate = async (id, postData) => {
@@ -33,6 +39,14 @@ const PostCard = (props) => {
   const handleDelete = async (id) => {
     await destroyPost(id);
     setPost(prevState => prevState.filter(post => post.id !== id))
+  }
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setComment({
+      ...comment,
+      [name]: value
+    });
   }
 
   return (
@@ -72,7 +86,18 @@ const PostCard = (props) => {
                     onClick={() => setShowComments(!showComments)}>Hide | Show Comments</button>
                   {showComments ? (
                     <div id="show-comments-box">
-                      <DisplayComments comments={props.comments} currentUser={props.currentUser} />
+                      <form id="new-comment-form">
+                  <input
+                    className="create-post-input"
+                    id="new-comment"
+                    type='text'
+                    placeholder='Add a comment'
+                    name='new-comment'
+                    // value={props.comment.content}
+                    onChange={handleChange}
+                    />
+                      </form>
+                <DisplayComments comments={props.comments} currentUser={props.currentUser} user={props.user}/>
                     </div>
                   ) : (
                       null
