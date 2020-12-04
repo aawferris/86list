@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-// import DisplayPost from '../../components/DisplayPost'
 import './Login.css'
 
 export default function Login(props) {
   const [formData, setFormData] = useState({
     username: "",
-    password: ""
+    password: "",
   })
 
   const handleChange = (e) => {
@@ -26,9 +25,10 @@ export default function Login(props) {
         <h3 id="login-title">Login</h3>
       <div id="login-sub-container">
         <div id="login-username-box">
-          <label id="username-label">Username:
+          <label id="username-label">
             <input
-              className="login-input"
+                className="login-input"
+                placeholder="Username"
               type='text'
               name='username'
               value={formData.username}
@@ -40,16 +40,17 @@ export default function Login(props) {
         </div>
         <br />
         <div id="login-password-box">
-          <label id="password-label">Password:
+          <label id="password-label">
             <input
-              className="login-input"
+                className="login-input"
+                placeholder="Password"
               type='password'
               name='password'
               value={formData.password}
               onChange={handleChange}
               required
             />
-          </label>
+            </label>
         </div>
         <br />
         <div id="login-link-boxes">

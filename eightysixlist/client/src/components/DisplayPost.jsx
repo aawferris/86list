@@ -28,7 +28,8 @@ class DisplayPost extends Component {
             post_id={post.id}
             title={post.title}
             content={post.content}
-            image_url={post.image_url }
+            image_url={post.image_url}
+            comments={post.comments}
             key={index}
           />
         ) : null

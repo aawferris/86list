@@ -4,7 +4,7 @@ import { NavLink, useHistory } from "react-router-dom";
 import { Modal, Button } from 'react-bootstrap'
 import { destroyPost, putPost } from '../services/posts'
 
-import Comments from './Comments'
+import DisplayComments from './DisplayComments'
 import "./PostCard.css";
 
 const LessonCard = (props) => {
@@ -36,20 +36,6 @@ const LessonCard = (props) => {
     // setRefresh(refresh)
   }
 
-  const dateOptions = {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric"
-  }
-  const timeOptions = {
-    timeZone:"Africa/Accra",
-    hour12 : true,
-    hour:  "2-digit",
-    minute: "2-digit",
-    second: "2-digit"
- };
-
   return (
       <div id="post-card-main-container">
         <div id="post-card-container">
@@ -68,7 +54,7 @@ const LessonCard = (props) => {
                 onClick={() => setShowComments(!showComments)}>Hide | Show Comments</button>
               {showComments ? (
                 <div id="show-comments-box">
-                  <Comments comment={post.comment} />
+                  <DisplayComments comments={props.comments} currentUser={props.currentUser} />
                 </div>
               ) : (
                   null
@@ -79,7 +65,7 @@ const LessonCard = (props) => {
               : */}
 
               <div id="post-card-button-container">
-                <NavLink id="post-card-edit-link" to={`/posts/${props.id}/edit`}><button id="post-card-edit-button">Edit</button></NavLink>
+                <NavLink id="post-card-edit-link" to={`/posts/${props.post_id}/edit`}><button id="post-card-edit-button">Edit</button></NavLink>
                 <button id="post-card-delete-button" onClick={handleShow}>Delete</button>
                 
                 <Modal show={show} onHide={handleClose}>
@@ -91,7 +77,7 @@ const LessonCard = (props) => {
                     <Button variant="primary" autoFocus onClick={handleClose}>
                       Close
                     </Button>
-                    <Button variant="danger" onClick={() => handleDelete(post.id)}>
+                    <Button variant="danger" onClick={() => handleDelete(props.post_id)}>
                       Yes, Delete
                     </Button>
                   </Modal.Footer>
