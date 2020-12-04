@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DisplayCard from './DisplayCard'
 
 class DisplayComments extends Component {
   constructor(props) {
@@ -12,13 +13,13 @@ class DisplayComments extends Component {
     const COMMENTCARDS = this.props.comments
       .map((comment, index) =>
         index < 8 ? (
-          <div>
-            {/* currentUser={this.props.currentUser}
+          <DisplayCard
+            currentUser={this.props.currentUser}
             id={comment.id}
             content={comment.content}
-            key={index} */}
-            <p>{comment.content}</p>
-          </div>
+            user={comment.user}
+            key={index}
+          />
         ) : null
       );
 

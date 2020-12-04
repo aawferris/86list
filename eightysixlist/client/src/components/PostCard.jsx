@@ -7,7 +7,7 @@ import { destroyPost, putPost } from '../services/posts'
 import DisplayComments from './DisplayComments'
 import "./PostCard.css";
 
-const LessonCard = (props) => {
+const PostCard = (props) => {
   console.log(props);
   const [post, setPost] = useState([])
   const history = useHistory();
@@ -33,7 +33,6 @@ const LessonCard = (props) => {
   const handleDelete = async (id) => {
     await destroyPost(id);
     setPost(prevState => prevState.filter(post => post.id !== id))
-    // setRefresh(refresh)
   }
 
   return (
@@ -91,4 +90,4 @@ const LessonCard = (props) => {
   )
 };
 
-export default LessonCard;
+export default PostCard;
