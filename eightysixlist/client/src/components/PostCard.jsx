@@ -9,12 +9,10 @@ import DisplayComments from './DisplayComments'
 import "./PostCard.css";
 
 const PostCard = (props) => {
-  console.log(props);
   const [post, setPost] = useState([])
   const history = useHistory();
 
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -22,8 +20,7 @@ const PostCard = (props) => {
 
   const [comment, setComment] = useState({
     content: '',
-    user_id: '',
-    post_id: ''
+    post_id: props.post_id
   });
 
   const [showComments, setShowComments] = useState(false)
@@ -90,8 +87,8 @@ const PostCard = (props) => {
                     id="new-comment"
                     type='text'
                     placeholder='Add a comment'
-                    name='new-comment'
-                    // value={props.comment.content}
+                    name='content'
+                    value={comment.content}
                     onChange={handleChange}
                     />
                       </form>

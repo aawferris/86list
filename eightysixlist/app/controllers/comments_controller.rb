@@ -18,7 +18,6 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_create_params)
     @comment.user = @current_user
-    # I won't need to associate restaurant here because the user is already logged in with a restaurant ID association
 
     if @comment.save
       render json: @comment, status: :created
@@ -26,16 +25,6 @@ class CommentsController < ApplicationController
       render json: @comment.errors, status: :unprocessable_entity
     end
   end
-
-  #  In this iteration (1), I will not allo wusers to edit (like IG)
-  # # PATCH/PUT /comment/1
-  # def update
-  #   if @comment.update(comment_create_params)
-  #     render json: @comment
-  #   else
-  #     render json: @comment.errors, status: :unprocessable_entity
-  #   end
-  # end
 
   # DELETE /posts/1
   def destroy
@@ -58,6 +47,9 @@ class CommentsController < ApplicationController
     end
 
     def comment_create_params
-      params.require(:comment).permit(:content, :post_id, :user_id)
+      params.require(:comment).permit(:content, :post_id).merge(user_id: @current_user.id)
     end
 end
+
+
+#  :post_id, :user_id
