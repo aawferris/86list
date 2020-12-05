@@ -4,11 +4,11 @@
 
 ## Unexpected Behavior
 
-> I'm stuck on getting comments to render
+> Comments won't post - getting a 422 error
 
 ## Expected Behavior
 
-> I want to have comments (at least from the seed data) showing up
+> Able to make new comments
 
 ## Reproduce the Error
 
@@ -16,7 +16,7 @@
 2) Start your rails server (rails s)
 3) Run npm run start
 4) Navigate to login (use "chrishaar" and "123456" for credentials)
-5) Click "Hide | Show Comments"
+5) Click "Hide | Show Comments" and try and adda new comment
 6) Nothing happens
 
 ## Documentation
@@ -34,5 +34,6 @@
 ```md
 1. https://stackoverflow.com/questions/50545259/ruby-on-rails-adding-comments-to-a-post
 2. https://stackoverflow.com/questions/34757168/ruby-on-rails-adding-comments-to-post
+3.https://stackoverflow.com/questions/29019159/rails4-status422-errorunprocessable-entity
 
 ```
