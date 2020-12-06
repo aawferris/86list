@@ -13,8 +13,8 @@ const CommentCard = (props) => {
   return (
       <div id="comment-card-main-container">
         <div id="comment-card-container">
-            {/* <p id="home-user">posted by: {props.user}</p> */}
-            <p id="home-content">{props.content}</p>
+            <p id="comment-user">posted by: {props.currentUser.username}</p>
+            <p id="comment-content">{props.content}</p>
         </div> {/* comment-card-container */}
     </div> // comment-card-main-container 
   )

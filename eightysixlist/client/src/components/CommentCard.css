@@ -1,7 +1,12 @@
 #comment-card-container {
-  box-shadow: 1px 2px 6px 2px #421527;
-  width: 43vw;
-  margin: 1.5vh 0 1.5vh 0.75vw;
+  /* box-shadow: 1px 2px 6px 2px #421527; */
+  border-left: 1px solid darkgray;
+  width: 100%;
+  margin: 1vh 0 1vh 2.5vw;
   padding: 1vh 1vw;
-  font-style: italic;
+  font-family: "Roboto", sans-serif;
+}
+
+#comment-user {
+  color: darkgray;
 }

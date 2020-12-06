@@ -1,0 +1,112 @@
+#post-card-main-container {
+  display: grid;
+  grid-template-areas:
+    "username timestamp"
+    "username timestamp"
+    "content content"
+    "image image"
+    "comments edit-delete"
+    "comment-box comment-box";
+  box-shadow: 1px 4px 4px 4px #421527;
+  max-width: 50vw;
+  width: 50vw;
+  text-align: center;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 2.5vh;
+}
+
+#username {
+  grid-area: username;
+  color: darkgray;
+  text-align: left;
+  margin-left: 2vw;
+}
+
+#timestamp {
+  grid-area: timestamp;
+  color: darkgray;
+  text-align: left;
+}
+
+/* #home-title {
+  grid-area: title;
+  font-size: 14px;
+  font-weight: bolder;
+  color: #ab3320;
+} */
+
+#home-content {
+  grid-area: content;
+  font-size: 16px;
+  text-align: left;
+  padding: 0 3vw;
+  font-family: "Roboto", "sans-serif";
+}
+
+#comment-ternary {
+  grid-area: comments;
+  border: none;
+  background-color: transparent;
+  color: darkgray;
+}
+
+#show-comments-box {
+  width: 100%;
+  grid-area: comment-box;
+  margin-top: 3vh;
+  width: 45vw;
+  text-align: left;
+}
+
+#new-comment-form {
+  width: 100%;
+}
+
+#new-comment {
+  width: 100%;
+}
+
+#image-container {
+  grid-area: image;
+}
+
+#post-image {
+  width: 30vw;
+  height: auto;
+  max-width: 30vw;
+  margin-bottom: 2vh;
+}
+
+#post-card-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 1vw;
+}
+
+#post-card-button-container {
+  grid-area: edit-delete;
+  display: flex;
+}
+
+#post-card-edit-button,
+#post-card-delete-button {
+  font-size: 16px;
+  width: 10vw;
+  padding: 0.5vw;
+  margin: 0 0.5vw;
+  border: none;
+  background-color: transparent;
+  color: darkgray;
+}
+
+#new-comment {
+  /* grid-area: comment-box; */
+  margin-left: 0.8vw;
+  margin-bottom: 1vh;
+  width: 43vw;
+  margin-left: 3.5vw;
+  padding: 1vh 1vw;
+}

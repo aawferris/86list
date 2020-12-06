@@ -34,7 +34,7 @@ function CreatePost(props) {
         <div id="create-post-sub-container">
           <h3 id="create-post-title">Create Post</h3>
           <div id="create-post-details-box">
-            <div id="create-title-box">
+            {/* <div id="create-title-box">
               <input
                 className="create-post-input"
                 type='text'
@@ -43,7 +43,7 @@ function CreatePost(props) {
                 value={post.title}
                 onChange={handleChange}
                 />
-            </div>
+            </div> */}
             <div id="create-content-box">
               <input
                 className="create-post-input"
