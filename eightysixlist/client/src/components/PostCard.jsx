@@ -16,8 +16,6 @@ const PostCard = (props) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const [refresh, setRefresh] = useState(false)
-
   const [comment, setComment] = useState({
     content: '',
     post_id: props.post_id
@@ -40,11 +38,12 @@ const PostCard = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await postComment(comment)
+    const newComment = await postComment(comment)
+    setComment(prevState => [...prevState, newComment])
     history.push('/posts')
   }
 
-  const timestamp = Date.now();
+  let commentLength = props.comments.length
 
   return (
       <div id="post-card-main-container">
@@ -75,7 +74,7 @@ const PostCard = (props) => {
           </Modal>
         </div> {/* THE } for the TERNARY GOES HERE post-card-button-container */} 
           <button id="comment-ternary"
-              onClick={() => setShowComments(!showComments)}>Hide | Show Comments</button>
+        onClick={() => setShowComments(!showComments)}>{commentLength} Comments</button>
             {showComments ? (
               <div id="show-comments-box">
                 <form id="new-comment-form" onSubmit={handleSubmit}>
