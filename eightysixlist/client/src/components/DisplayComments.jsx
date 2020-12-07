@@ -16,6 +16,7 @@ class DisplayComments extends Component {
           <CommentCard
             currentUser={this.props.currentUser}
             id={comment.id}
+            // user={props.user.username}
             content={comment.content}
             user={comment.user}
             key={index}

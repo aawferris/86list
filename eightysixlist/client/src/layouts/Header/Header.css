@@ -2,10 +2,9 @@
   display: flex;
   justify-content: space-between;
   padding: 0 15px 0 15px;
-  background-color: #dceacd;
+  background-color: #dceacd8a;
   height: 12vh;
   align-items: center;
-  margin-bottom: 4vh;
   box-shadow: 2px 3px 8px 8px #341528;
 }
 

@@ -1,14 +1,17 @@
 import React, { Component } from "react";
 import PostCard from './PostCard'
 import { getAllPosts } from "../services/posts";
+import { getAllComments } from "../services/comments";
 
 class DisplayPost extends Component {
   constructor(props) {
     super(props);
     this.state = {
       posts: [],
+      comments: []
     };
   }
+
 
   async componentDidMount() {
     const posts = await getAllPosts();
