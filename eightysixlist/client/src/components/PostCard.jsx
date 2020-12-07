@@ -26,6 +26,7 @@ const PostCard = (props) => {
   const handleDelete = async (id) => {
     await destroyPost(id);
     setPost(prevState => prevState.filter(post => post.id !== id))
+    setShow(false)
   }
 
   const handleChange = (event) => {
@@ -47,12 +48,16 @@ const PostCard = (props) => {
 
   return (
       <div id="post-card-main-container">
-        <p id="username">Posted by {props.currentUser.username}</p> {/* CURRENTLY SHOWS THE CURRENT USER -- NOT THE USER WHO MADE IT */}
+      <p id="username">Posted by {props.currentUser.username}</p> {/* CURRENTLY SHOWS THE CURRENT USER -- NOT THE USER WHO MADE IT */}
         <p id="timestamp">{props.created_at}</p>
         {/* <p id="home-title">{props.title}</p> */}
         <p id="home-content">{props.content}</p>
         <div id="image-container">
+        {props.image_url ? 
           <img className="post-attr" id="post-image" src={props.image_url} alt="user-generated image" />
+          :
+          null
+        }
         </div>
         <div id="post-card-button-container">
           <NavLink id="post-card-edit-link" to={`/posts/${props.post_id}/edit`}><button id="post-card-edit-button">Edit</button></NavLink>
