@@ -42,7 +42,7 @@
 #register-button,
 #logout-button {
   font-size: 16px;
-  width: 10vw;
+  width: fit-content;
   padding: 0.5vw;
   margin-right: 1vw;
   background-color: #5dada5;
@@ -60,9 +60,15 @@
   margin-top: 1.5vh;
 }
 
-#header-restaurant-link,
-#header-separator,
-#header-posts-link {
-  margin-right: 1vw;
-  margin-top: 1.5vh;
+@media screen and (max-width: 650px) {
+  #login-button,
+  #register-button,
+  #logout-button {
+    width: fit-content;
+    font-size: 9px;
+  }
+
+  .current-user-display {
+    font-size: 10px;
+  }
 }

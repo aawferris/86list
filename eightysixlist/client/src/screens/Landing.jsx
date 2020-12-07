@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import LandingFeed from '../components/LandingFeed'
 import RestaurantsLandingFeed from '../components/RestaurantsLandingFeed'
 import { getAllPosts } from '../services/posts'
@@ -10,7 +10,7 @@ import './Landing.css'
 export default function MainContainer(props) {
   const [posts, setPosts] = useState([]); 
   const [restaurants, setRestaurants] = useState([]);
-  const history = useHistory();
+  // const history = useHistory();
 
   useEffect(() => {
     const fetchData = async () => {

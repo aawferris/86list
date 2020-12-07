@@ -110,3 +110,26 @@
   margin-left: 3.5vw;
   padding: 1vh 1vw;
 }
+
+@media screen and (max-width: 675px) {
+  #post-card-main-container {
+    max-width: 300px;
+  }
+
+  #post-image {
+    max-width: 30vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #post-card-main-container,
+  #username,
+  #timestamp,
+  #home-content,
+  #post-image,
+  #post-card-edit-button,
+  #post-card-delete-button {
+    max-width: 200px;
+    font-size: 9px;
+  }
+}
