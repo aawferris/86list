@@ -47,7 +47,7 @@ function EditPost(props) {
         <div id="edit-post-sub-container">
           <h3 id="edit-post-title">Edit Post</h3>
           <div id="edit-post-details-box">
-            <div id="edit-title-box">
+            {/* <div id="edit-title-box">
               <input
                 className="edit-post-input"
                 type='text'
@@ -55,10 +55,11 @@ function EditPost(props) {
                 value={post.title}
                 onChange={handleChange}
                 />
-            </div>
+            </div> */}
             <div id="edit-content-box">
               <input
                 className="edit-post-input"
+                placeholder="Whatcha wanna say?"
                 id="edit-content-input"
                 type='textarea'
                 name='content'
@@ -69,6 +70,7 @@ function EditPost(props) {
             <div id="edit-image-box">
               <input
                 className="edit-post-input"
+                placeholder="Image link"
                 type='text'
                 name='image_url'
                 value={post.image_url}

@@ -20,7 +20,11 @@ const LandingCard = (props) => {
               <p className="post-attr" id="landing-content">{props.content}</p>
             </div>
             <div id="landing-image-container">
+            {props.image_url ?
               <img className="post-attr" id="landing-post-image" src={props.image_url} alt="user-generated image" />
+              :
+            null
+            }
             </div>
             </div>
           </div>

@@ -12,6 +12,9 @@
 
 #create-post-title {
   font-size: 48px;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  color: #421527;
 }
 
 #create-post-details-box {
@@ -20,13 +23,12 @@
   width: 25vw;
   border: 1px solid black;
   padding: 1vh 1vw;
-  background-color: #dceacd;
+  background-color: #a1b6c1;
 }
 
 #create-title-box,
 #create-content-box,
-#create-image-box,
-#create-restaurant-box {
+#create-image-box {
   display: flex;
   justify-content: space-between;
   padding: 1vh 0;
@@ -35,7 +37,7 @@
 }
 
 .create-post-input {
-  width: 40vw;
+  width: 100%;
   font-size: 16px;
 }
 
@@ -45,5 +47,29 @@
 
 #create-post-submit-button {
   width: fit-content;
-  margin-top: 1vh;
+  margin-top: 4vh;
+  font-size: 16px;
+  margin-left: 7.5vw;
+  width: 10vw;
+  padding: 0.5vw;
+  background-color: #5dada5;
+}
+
+#create-post-submit-button:hover {
+  background-color: #69c2b9;
+}
+
+@media screen and (max-width: 775px) {
+  #create-post-title {
+    font-size: 20px;
+  }
+
+  #create-post-details-box {
+    font-size: 10px;
+  }
+
+  #create-post-submit-button {
+    font-size: 9px;
+    width: fit-content;
+  }
 }

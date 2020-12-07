@@ -6,7 +6,6 @@ import './Home.css'
 function Home(props) {
   return (
     <div id="home-main-container">
-      <h3 id="home-title">Hogar, Dulce Hogar!</h3>
       <div id="create-post-container">
         <Link to="/posts/new"><button id="create-post-button">CREATE POST</button></Link>
       </div>

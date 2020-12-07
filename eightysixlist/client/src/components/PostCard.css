@@ -1,55 +1,80 @@
 #post-card-main-container {
-  display: flex;
-  justify-content: center;
-}
-
-#post-card-container {
-  display: flex;
-}
-
-#post-card-details {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-areas:
+    "username timestamp"
+    "username timestamp"
+    "content content"
+    "image image"
+    "comments edit-delete"
+    "comment-box comment-box";
   box-shadow: 1px 4px 4px 4px #421527;
   max-width: 50vw;
   width: 50vw;
-  margin: 1vw 0;
   text-align: center;
   align-items: center;
+  background-color: #fff;
+  margin-bottom: 2.5vh;
 }
 
-.post-attr {
-  font-weight: bold;
-  padding: 0 1vw;
+#username {
+  grid-area: username;
+  color: darkgray;
+  text-align: left;
+  margin-left: 2vw;
 }
 
-#home-title {
-  font-size: 2.25vh;
+#timestamp {
+  grid-area: timestamp;
+  color: darkgray;
+  text-align: left;
+}
+
+/* #home-title {
+  grid-area: title;
+  font-size: 14px;
+  font-weight: bolder;
   color: #ab3320;
-}
+} */
 
 #home-content {
-  font-size: 2vh;
+  grid-area: content;
+  font-size: 16px;
+  text-align: left;
+  padding: 0 3vw;
+  font-family: "Roboto", "sans-serif";
 }
 
 #comment-ternary {
+  grid-area: comments;
   border: none;
   background-color: transparent;
   color: darkgray;
 }
 
 #show-comments-box {
-  display: flex;
+  width: 100%;
+  grid-area: comment-box;
   margin-top: 3vh;
   width: 45vw;
   text-align: left;
 }
 
+#new-comment-form {
+  width: 100%;
+}
+
+#new-comment {
+  width: 100%;
+}
+
+#image-container {
+  grid-area: image;
+}
+
 #post-image {
-  width: auto;
-  height: 30vh;
-  max-height: 30vh;
-  max-width: 40vw;
+  width: 30vw;
+  height: auto;
+  max-width: 30vw;
   margin-bottom: 2vh;
 }
 
@@ -61,6 +86,11 @@
   margin-bottom: 1vw;
 }
 
+#post-card-button-container {
+  grid-area: edit-delete;
+  display: flex;
+}
+
 #post-card-edit-button,
 #post-card-delete-button {
   font-size: 16px;
@@ -70,4 +100,36 @@
   border: none;
   background-color: transparent;
   color: darkgray;
+}
+
+#new-comment {
+  /* grid-area: comment-box; */
+  margin-left: 0.8vw;
+  margin-bottom: 1vh;
+  width: 43vw;
+  margin-left: 3.5vw;
+  padding: 1vh 1vw;
+}
+
+@media screen and (max-width: 675px) {
+  #post-card-main-container {
+    max-width: 300px;
+  }
+
+  #post-image {
+    max-width: 30vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #post-card-main-container,
+  #username,
+  #timestamp,
+  #home-content,
+  #post-image,
+  #post-card-edit-button,
+  #post-card-delete-button {
+    max-width: 200px;
+    font-size: 9px;
+  }
 }
