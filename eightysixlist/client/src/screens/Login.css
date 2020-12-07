@@ -11,7 +11,7 @@
 #login-title {
   font-size: 48px;
   margin-top: 5vh;
-  color: #ab3320;
+  color: #9a5962;
 }
 
 #login-username-box,
@@ -36,4 +36,26 @@
   flex-direction: column;
   align-items: center;
   padding: 15px 0;
+}
+
+#login-submit {
+  background-color: #5dada5;
+  padding: 0.3vw;
+  margin-bottom: 2vh;
+}
+
+a {
+  text-decoration: none;
+  color: #9a5962;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #9a5962;
+  font-weight: bolder;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #9a5962;
 }

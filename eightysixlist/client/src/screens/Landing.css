@@ -1,7 +1,6 @@
 #main-container-div {
   display: flex;
   justify-content: space-evenly;
-  height: 80vh;
 }
 
 #recent-title {

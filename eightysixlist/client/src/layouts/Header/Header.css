@@ -2,7 +2,14 @@
   display: flex;
   justify-content: space-between;
   padding: 0 15px 0 15px;
-  background-color: #dceacd8a;
+  background: rgb(93, 173, 165);
+  background: linear-gradient(
+    90deg,
+    #5dada5 2%,
+    #a1b6c1 18%,
+    #e38597 89%,
+    #421527 100%
+  );
   height: 12vh;
   align-items: center;
   box-shadow: 2px 3px 8px 8px #341528;
@@ -13,13 +20,6 @@
   align-items: center;
 }
 
-#title {
-  align-content: center;
-  color: #341528;
-  margin-left: 10px;
-  text-decoration: none;
-}
-
 #logo {
   height: 60px;
   width: auto;
@@ -28,15 +28,6 @@
 #header-right {
   display: flex;
   align-items: center;
-}
-
-a {
-  text-decoration: none;
-  color: #dd7965;
-}
-
-a:visited {
-  color: #dd7965;
 }
 
 #header-buttons {
@@ -50,12 +41,10 @@ a:visited {
   width: 10vw;
   padding: 0.5vw;
   margin-right: 1vw;
-  background-color: #dd7965;
-  color: #341528;
+  background-color: #5dada5;
 }
 
 .current-user-display {
-  color: #341528;
   font-weight: bolder;
   margin-right: 1vw;
   margin-top: 1.5vh;

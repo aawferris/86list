@@ -6,7 +6,7 @@ import { destroyPost } from '../services/posts'
 import { postComment } from '../services/comments'
 
 import DisplayComments from './DisplayComments'
-import "./GridPostCard.css";
+import "./PostCard.css";
 
 const PostCard = (props) => {
   const [post, setPost] = useState([])
