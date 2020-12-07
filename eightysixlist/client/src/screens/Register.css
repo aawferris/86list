@@ -52,3 +52,20 @@
 #register-submit:hover {
   background-color: #69c2b9;
 }
+
+@media screen and (max-width: 375px) {
+  #name-box,
+  #address-box,
+  #email-box,
+  #username-box,
+  #password-box,
+  #confirm-box,
+  #phone-box,
+  #age-box,
+  #restaurant-box,
+  #location-box,
+  #register-terms-box,
+  #register-community-box {
+    font-size: 10px;
+  }
+}

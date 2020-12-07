@@ -17,7 +17,7 @@
 #edit-post-details-box {
   display: flex;
   flex-direction: column;
-  width: 25vw;
+  width: 100%;
   border: 1px solid black;
   padding: 1vh 1vw;
   background-color: #a1b6c1;
@@ -55,4 +55,19 @@
 
 #edit-post-submit-button:hover {
   background-color: #69c2b9;
+}
+
+@media screen and (max-width: 775px) {
+  #edit-post-title {
+    font-size: 20px;
+  }
+
+  #edit-post-details-box {
+    font-size: 10px;
+  }
+
+  #edit-post-submit-button {
+    font-size: 9px;
+    width: fit-content;
+  }
 }

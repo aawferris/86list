@@ -45,3 +45,15 @@
   align-items: center;
   margin-bottom: 1vw;
 }
+
+@media screen and (max-width: 675px) {
+  #landing-post-image {
+    max-width: 30vw;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #landing-card-main-container {
+    background-color: #f5eed7;
+  }
+}

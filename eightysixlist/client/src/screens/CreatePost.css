@@ -28,8 +28,7 @@
 
 #create-title-box,
 #create-content-box,
-#create-image-box,
-#create-restaurant-box {
+#create-image-box {
   display: flex;
   justify-content: space-between;
   padding: 1vh 0;
@@ -38,7 +37,7 @@
 }
 
 .create-post-input {
-  width: 40vw;
+  width: 100%;
   font-size: 16px;
 }
 
@@ -58,4 +57,19 @@
 
 #create-post-submit-button:hover {
   background-color: #69c2b9;
+}
+
+@media screen and (max-width: 775px) {
+  #create-post-title {
+    font-size: 20px;
+  }
+
+  #create-post-details-box {
+    font-size: 10px;
+  }
+
+  #create-post-submit-button {
+    font-size: 9px;
+    width: fit-content;
+  }
 }

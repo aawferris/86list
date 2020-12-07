@@ -8,7 +8,7 @@ export default function Header(props) {
     <div id="header-container">
       <Link to="/">
         <div id="header-left">
-        <img id="logo" src="/assets/86list-logo.png" alt="the iconic 86list image"/>
+        <img id="logo" src="/assets/86list-logo.png" alt="the iconic 86list"/>
         {/* <h1 id="title">86list</h1> */}
       </div>
       </Link>

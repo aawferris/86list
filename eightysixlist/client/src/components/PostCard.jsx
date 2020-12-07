@@ -54,7 +54,7 @@ const PostCard = (props) => {
         <p id="home-content">{props.content}</p>
         <div id="image-container">
         {props.image_url ? 
-          <img className="post-attr" id="post-image" src={props.image_url} alt="user-generated image" />
+          <img className="post-attr" id="post-image" src={props.image_url} alt="user-generated" />
           :
           null
         }

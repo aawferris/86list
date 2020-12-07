@@ -150,7 +150,7 @@ export default function Register(props) {
           />
       </div>
       <div id="register-terms-box">
-          <label id="terms-label">I agree to the <a>Terms and Conditions</a>:
+          <label id="terms-label">I agree to the <a href="https://termly.io/resources/templates/terms-and-conditions-template/" target="_blank" rel="noreferrer">Terms and Conditions</a>:
             <input
               className="login-input"
               type='checkbox'
@@ -162,7 +162,7 @@ export default function Register(props) {
           </label>
         </div>
         <div id="register-community-box">
-          <label id="community-label">I agree to the <a>Community Guidelines</a>:
+          <label id="community-label">I agree to the <a href="https://www.360alumni.com/support/sample-community-development-content" target="_blank" rel="noreferrer">Community Guidelines</a>:
             <input
               className="login-input"
               type='checkbox'
