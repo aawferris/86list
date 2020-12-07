@@ -11,7 +11,6 @@
 - Link Restaurants to Users and Posts to both Users and Restaurants
 - Leverage React.js to create a simple, clean and elegant UI
 
-
 ### Libraries and Dependencies
 
 |     Library     | Description                                              |
@@ -47,34 +46,32 @@ src
       |__ images
       |__ mockups
 |__ components/
-      |__ Header.jsx
-      |__ Header.css
-      |__ Footer.jsx
-      |__ Footer.css
-      |__ Navigation.jsx
-      |__ Navigation.css
-|__ containers/
-      |__ MainContainer.jsx
+      |__ CommentCard.jsx
+      |__ DisplayComments.jsx
+      |__ DisplayPost.jsx
+      |__ LandingCard.jas
+      |__ LandingFeed.jsx
+      |__ PostCard.jsx
+      |__ RestaurantLandingCard.jsx
+      |__ RestaurantLandingFeed.jsx
 |__ layouts/
-      |__ Layout.jsx
-      |__ Layout.css
+      |__ Layout
+      |__ Header
+      |__ Footer
 |__ screens/
       |__ Landing.jsx
-      |__ Landing.css
       |__ Register.jsx
-      |__ Register.css
       |__ Login.jsx
-      |__ Login.css
-      |__ Threads.jsx
-      |__ Threads.css
-      |__ Post.jsx
-      |__ Post.css
+      |__ CreatePost.jsx
+      |__ EditPost.jsx
+      |__ Home.jsx
 |__ services/
       |__ apiConfig.js
       |__ restaurants.js
       |__ locations.js
       |__ users.js
-      |__ auth.js **(Post)
+      |__ auth.js
+      |__ posts.js
 |__ App.js
 |__ App.css
 |__ index.js
@@ -91,20 +88,20 @@ src
 
 | Task                                            | Priority | Estimated Time | Time Invested | Actual Time |
 | ----------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Setup Ruby on Rails Boiler Plate                |    L     |      3hrs      |     ----      |    ----     |
-| Create BE for restaurants, locations, and users |    H     |      6hrs      |     ----      |    ----     |
-| Create BE for posts and comments                |    H     |      6hrs      |     ----      |    ----     |
-| Create CRUD Actions                             |    H     |      6hrs      |     ----      |    ----     |
-| Create sign up form                             |    H     |      3hrs      |     ----      |    ----     |
-| Create login screen                             |    H     |      3hrs      |     ----      |    ----     |
-| Create thread screen                            |    H     |      3hrs      |     ----      |    ----     |
-| Create post view/manipulations screens          |    H     |      3hrs      |     ----      |    ----     |
-| Styling for aforementioned screens              |    H     |      3hrs      |     ----      |    ----     |
-| Advanced styling                                |    H     |      3hrs      |     ----      |    ----     |
-| Debugging and Testing                           |    M     |      3hrs      |     ----      |    ----     |
-| Local Deployment                                |    M     |      3hrs      |     ----      |    ----     |
-| Netlify Deployment                              |    M     |      3hrs      |     ----      |    ----     |
-| TOTAL                                           |          |     45hrs      |     3hrs      |     TBD     |
+| Setup Ruby on Rails Boiler Plate                |    L     |      3hrs      |     3hrs      |    3hrs     |
+| Create BE for restaurants, locations, and users |    H     |      6hrs      |     6hrs      |    6hrs     |
+| Create BE for posts and comments                |    H     |      6hrs      |     6hrs      |    6hrs     |
+| Create CRUD Actions                             |    H     |      6hrs      |     6hrs      |    6hrs     |
+| Create sign up form                             |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Create login screen                             |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Create thread screen                            |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Create post view/manipulations screens          |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Styling for aforementioned screens              |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Advanced styling                                |    H     |      3hrs      |     3hrs      |    3hrs     |
+| Debugging and Testing                           |    M     |      3hrs      |     3hrs      |    3hrs     |
+| Local Deployment                                |    M     |      3hrs      |     3hrs      |    3hrs     |
+| Netlify Deployment                              |    M     |      3hrs      |     3hrs      |    3hrs     |
+| TOTAL                                           |          |     45hrs      |     45hrs     |    45hrs    |
 
 <br>
 
@@ -126,6 +123,40 @@ https://drive.google.com/file/d/1S6sTTIWZM4-rZq8ah-UJLti7qx6Jh6cl/view?usp=shari
 - Require authorization for users to post and comment
 - Create an admin login to see and manipulate the data for restraunts and locations (for apporval) and users
 
-<!-- ## Code Showcase -->
+## Code Showcase
 
-<!-- ## Code Issues & Resolutions -->
+- I've been quite pleased with my comfort with ternaries this time around. I leveraged a few for small 1%'s that make the UX even better.
+
+```
+{props.image_url ?
+          <img className="post-attr" id="post-image" src={props.image_url} alt="user-generated" />
+          :
+          null
+        }
+```
+
+```
+<div id="post-card-button-container">
+          <NavLink id="post-card-edit-link" to={`/posts/${props.post_id}/edit`}><button id="post-card-edit-button">Edit</button></NavLink>
+          <button id="post-card-delete-button" onClick={handleShow}>Delete</button>
+
+          <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+              <Modal.Title>¡Alert!</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>Are you sure you want to delete this post? This action cannot be undone.</Modal.Body>
+            <Modal.Footer>
+              <Button variant="primary" autoFocus onClick={handleClose}>
+                Close
+              </Button>
+              <Button variant="danger" onClick={() => handleDelete(props.post_id)}>
+                Yes, Delete
+              </Button>
+            </Modal.Footer>
+          </Modal>
+```
+
+## Code Issues & Resolutions
+
+- It was tough to figure out the associations between tables for making posts.
+- I am still working my way through creating new users.
