@@ -10,8 +10,9 @@
 
 #register-title {
   font-size: 48px;
-  color: #ab3320;
+  color: #9a5962;
   text-align: center;
+  margin-top: 4vh;
 }
 
 #name-box,
@@ -44,4 +45,10 @@
   width: fit-content;
   font-size: 15px;
   margin: 45px auto;
+  background-color: #5dada5;
+  padding: 0.5vw;
+}
+
+#register-submit:hover {
+  background-color: #69c2b9;
 }

@@ -20,7 +20,7 @@
   width: 25vw;
   border: 1px solid black;
   padding: 1vh 1vw;
-  background-color: #dceacd;
+  background-color: #a1b6c1;
 }
 
 #edit-title-box,
@@ -46,4 +46,13 @@
 #edit-post-submit-button {
   width: fit-content;
   margin-top: 1vh;
+  font-size: 16px;
+  width: 10vw;
+  padding: 0.5vw;
+  margin-right: 1vw;
+  background-color: #5dada5;
+}
+
+#edit-post-submit-button:hover {
+  background-color: #69c2b9;
 }
