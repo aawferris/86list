@@ -12,6 +12,9 @@
 
 #create-post-title {
   font-size: 48px;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  color: #421527;
 }
 
 #create-post-details-box {
@@ -45,5 +48,14 @@
 
 #create-post-submit-button {
   width: fit-content;
-  margin-top: 1vh;
+  margin-top: 4vh;
+  font-size: 16px;
+  margin-left: 7.5vw;
+  width: 10vw;
+  padding: 0.5vw;
+  background-color: #5dada5;
+}
+
+#create-post-submit-button:hover {
+  background-color: #69c2b9;
 }

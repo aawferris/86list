@@ -17,3 +17,7 @@
   background-color: #e38597;
   font-weight: bolder;
 }
+
+#create-post-button:hover {
+  background-color: #f6a5b4;
+}
