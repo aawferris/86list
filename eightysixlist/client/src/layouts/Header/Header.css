@@ -25,6 +25,10 @@
   width: auto;
 }
 
+#logo:hover {
+  filter: blur(2px);
+}
+
 #header-right {
   display: flex;
   align-items: center;
@@ -42,6 +46,12 @@
   padding: 0.5vw;
   margin-right: 1vw;
   background-color: #5dada5;
+}
+
+#login-button:hover,
+#register-button:hover,
+#logout-button:hover {
+  background-color: #69c2b9;
 }
 
 .current-user-display {
