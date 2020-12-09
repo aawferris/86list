@@ -1,5 +1,0 @@
-class RenameRestToLocation < ActiveRecord::Migration[6.0]
-  def change
-    change_column :users, :restaurant, :location
-  end
-end
