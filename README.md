@@ -4,24 +4,13 @@
 
 86List is a community for service-industry professionals to talk about the clients that they serve. This idea surfaced during a conversation with my neighbor, a career, high-end bartender. He mentioned that while guests can rate restaurants, restaurants can't rate guests. 86List is a place where servers and bartenders at a specific restaurant/eatery can talk about the clients that they serve and rate them. The title is a play on words, as '86' is the way to say 'get rid of' or 'without'. So this is geared towards guests they'd rather 86.
 
-## MVP
+I created this app using Ruby on Rails for the back end and React.js for the front end.  In future iterations, I want to add the following:
 
-- Leverage Ruby on Rails for full CRUD
-- Link the backend to Postresql
-- Link Restaurants to Users and Posts to both Users and Restaurants
-- Leverage React.js to create a simple, clean and elegant UI
-
-### Libraries and Dependencies
-
-|     Library     | Description                                              |
-| :-------------: | :------------------------------------------------------- |
-|      React      | To render the front end and make it a dynamic SPA        |
-|  React Router   | To use for navigation, link and history                  |
-| React Bootstrap | To use for additional styling features beyond simple CSS |
-|  Ruby on Rails  | To connect the fron and back ends                        |
-|   Postgresql    | The DB to store our data                                 |
-
-<br>
+- An admin-only page to create and approve new users and new restaurants (like Nextdoor does)
+- Hook up the login page (right now is not functional) to allow for create users
+- Correctly render the author of each post with the post card itself
+- Format the timestamp to not be Linux-based
+- Restyle the page; a major overhaul of color scheme.
 
 ### Client (Front End)
 
@@ -84,27 +73,6 @@ src
 
 ```
 
-#### Time Estimates
-
-| Task                                            | Priority | Estimated Time | Time Invested | Actual Time |
-| ----------------------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Setup Ruby on Rails Boiler Plate                |    L     |      3hrs      |     3hrs      |    3hrs     |
-| Create BE for restaurants, locations, and users |    H     |      6hrs      |     6hrs      |    6hrs     |
-| Create BE for posts and comments                |    H     |      6hrs      |     6hrs      |    6hrs     |
-| Create CRUD Actions                             |    H     |      6hrs      |     6hrs      |    6hrs     |
-| Create sign up form                             |    H     |      3hrs      |     3hrs      |    3hrs     |
-| Create login screen                             |    H     |      3hrs      |     3hrs      |    3hrs     |
-| Create thread screen                            |    H     |      3hrs      |     3hrs      |    3hrs     |
-| Create post view/manipulations screens          |    H     |      3hrs      |     3hrs      |    3hrs     |
-| Styling for aforementioned screens              |    H     |      3hrs      |     3hrs      |    3hrs     |
-| Advanced styling                                |    H     |      3hrs      |     3hrs      |    3hrs     |
-| Debugging and Testing                           |    M     |      3hrs      |     3hrs      |    3hrs     |
-| Local Deployment                                |    M     |      3hrs      |     3hrs      |    3hrs     |
-| Netlify Deployment                              |    M     |      3hrs      |     3hrs      |    3hrs     |
-| TOTAL                                           |          |     45hrs      |     45hrs     |    45hrs    |
-
-<br>
-
 ### Server (Back End)
 
 #### ERD Model
@@ -115,13 +83,6 @@ https://drive.google.com/file/d/1S6sTTIWZM4-rZq8ah-UJLti7qx6Jh6cl/view?usp=shari
 
 ---
 
-## PostMVP
-
-- Allow users to login in order to see only their Restaurant
-- Create the ability to add comments to posts
-- Require authorization for users to access their specific locations
-- Require authorization for users to post and comment
-- Create an admin login to see and manipulate the data for restraunts and locations (for apporval) and users
 
 ## Code Showcase
 
@@ -156,7 +117,5 @@ https://drive.google.com/file/d/1S6sTTIWZM4-rZq8ah-UJLti7qx6Jh6cl/view?usp=shari
           </Modal>
 ```
 
-## Code Issues & Resolutions
+## Changelog
 
-- It was tough to figure out the associations between tables for making posts.
-- I am still working my way through creating new users.
