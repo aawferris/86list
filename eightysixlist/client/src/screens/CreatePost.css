@@ -2,6 +2,8 @@
   display: flex;
   justify-content: center;
   height: 65vh;
+  background-color: #a1b6c1a8;
+  height: 100vh;
 }
 
 #create-post-sub-container {
@@ -14,7 +16,7 @@
   font-size: 48px;
   margin-top: 4vh;
   margin-bottom: 4vh;
-  color: #421527;
+  color: #bb5e73;
 }
 
 #create-post-details-box {
@@ -23,7 +25,7 @@
   width: 25vw;
   border: 1px solid black;
   padding: 1vh 1vw;
-  background-color: #a1b6c1;
+  background-color: #f7f8f4;
 }
 
 #create-title-box,
@@ -52,11 +54,11 @@
   margin-left: 7.5vw;
   width: 10vw;
   padding: 0.5vw;
-  background-color: #5dada5;
+  background-color: #7e90ab;
 }
 
 #create-post-submit-button:hover {
-  background-color: #69c2b9;
+  background-color: #96abca;
 }
 
 @media screen and (max-width: 775px) {

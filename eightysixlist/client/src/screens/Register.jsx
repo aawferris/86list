@@ -155,7 +155,6 @@ export default function Register(props) {
               className="login-input"
               type='checkbox'
               name='terms'
-              // value={formData.password}
               onChange={handleChange}
               required
             />
@@ -167,7 +166,6 @@ export default function Register(props) {
               className="login-input"
               type='checkbox'
               name='community'
-              // value={formData.password}
               onChange={handleChange}
               required
             />

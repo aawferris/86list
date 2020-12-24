@@ -2,6 +2,8 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  background-color: #a1b6c1a8;
+  height: 100vh;
 }
 
 #login-sub-container {
@@ -11,13 +13,12 @@
 #login-title {
   font-size: 48px;
   margin-top: 5vh;
-  color: #9a5962;
+  color: #bb5e73;
 }
 
 #login-username-box,
 #login-password-box {
   justify-content: space-between;
-  color: #421527;
   font-weight: bolder;
 }
 
@@ -27,7 +28,6 @@
 
 .login-input {
   margin-left: 20px;
-  color: #341528;
   font-size: 15px;
 }
 
@@ -39,27 +39,27 @@
 }
 
 #login-submit {
-  background-color: #5dada5;
+  background-color: #7e90ab;
   padding: 0.3vw;
   margin-bottom: 2vh;
 }
 
 #login-submit:hover {
-  background-color: #69c2b9;
+  background-color: #96abca;
 }
 
 a {
   text-decoration: none;
-  color: #9a5962;
+  color: #bb5e73;
 }
 
 a:hover {
   text-decoration: none;
-  color: #9a5962;
+  color: #bb5e73;
   font-weight: bolder;
 }
 
 a:visited {
   text-decoration: none;
-  color: #9a5962;
+  color: #bb5e73;
 }

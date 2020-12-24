@@ -1,6 +1,8 @@
 #register-main-container {
   display: flex;
   justify-content: center;
+  background-color: #a1b6c1a8;
+  height: 100vh;
 }
 
 #input-main-box {
@@ -10,7 +12,7 @@
 
 #register-title {
   font-size: 48px;
-  color: #9a5962;
+  color: #bb5e73;
   text-align: center;
   margin-top: 4vh;
 }
@@ -31,12 +33,10 @@
   width: 50vw;
   padding: 0.75vh 0;
   justify-content: space-between;
-  color: #421527;
   font-weight: bolder;
 }
 
 .register-input {
-  color: #341528;
   font-size: 15px;
   width: 30vw;
 }
@@ -45,12 +45,12 @@
   width: fit-content;
   font-size: 15px;
   margin: 45px auto;
-  background-color: #5dada5;
+  background-color: #7e90ab;
   padding: 0.5vw;
 }
 
 #register-submit:hover {
-  background-color: #69c2b9;
+  background-color: #96abca;
 }
 
 @media screen and (max-width: 375px) {

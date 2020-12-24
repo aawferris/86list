@@ -6,30 +6,24 @@
 #restaurant-landing-card-container {
   display: flex;
   flex-direction: column;
-  box-shadow: 1px 4px 4px 4px #421527;
+  box-shadow: 1px 1px 8px 2px #2a5279;
   width: 38vw;
   height: fit-content;
   margin: 1vw 0;
+  background-color: #f7f8f4;
 }
 
 #landing-restaurant {
   font-size: 3vh;
-  color: #9a5962;
+  color: #bb5e73;
 }
 
 #landing-city-state {
   font-size: 2vh;
   font-weight: normal;
-  color: #421527;
 }
 
 .post-attr {
   font-weight: bold;
   padding: 0 1vw;
-}
-
-@media screen and (max-width: 375px) {
-  #restaurant-landing-card-main-container {
-    background-color: #f5eed7;
-  }
 }

@@ -1,6 +1,7 @@
 #main-container-div {
   display: flex;
   justify-content: space-evenly;
+  background-color: #7e90ab5d;
 }
 
 #recent-title {

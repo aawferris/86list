@@ -14,10 +14,10 @@
   width: fit-content;
   padding: 0.5vw;
   margin: 3vh 0.5vw 1.5vh 0.5vw;
-  background-color: #e38597;
+  background-color: #7e90ab;
   font-weight: bolder;
 }
 
 #create-post-button:hover {
-  background-color: #f6a5b4;
+  background-color: #96abca;
 }

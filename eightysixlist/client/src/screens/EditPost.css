@@ -2,6 +2,8 @@
   display: flex;
   justify-content: center;
   height: 65vh;
+  background-color: #7e90ab5d;
+  height: 100vh;
 }
 
 #edit-post-sub-container {
@@ -12,6 +14,7 @@
 
 #edit-post-title {
   font-size: 48px;
+  margin-top: 5vh;
 }
 
 #edit-post-details-box {
@@ -20,7 +23,7 @@
   width: 100%;
   border: 1px solid black;
   padding: 1vh 1vw;
-  background-color: #a1b6c1;
+  background-color: #f7f8f4;
 }
 
 #edit-title-box,
@@ -50,11 +53,11 @@
   width: 10vw;
   padding: 0.5vw;
   margin-right: 1vw;
-  background-color: #5dada5;
+  background-color: #96abca;
 }
 
 #edit-post-submit-button:hover {
-  background-color: #69c2b9;
+  background-color: #abc1e2;
 }
 
 @media screen and (max-width: 775px) {

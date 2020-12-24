@@ -7,12 +7,12 @@
     "image image"
     "comments edit-delete"
     "comment-box comment-box";
-  box-shadow: 1px 4px 4px 4px #421527;
+  box-shadow: 1px 1px 8px 2px #2a5279;
   max-width: 50vw;
   width: 50vw;
   text-align: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #f7f8f4;
   margin-bottom: 2.5vh;
 }
 
@@ -28,13 +28,6 @@
   color: darkgray;
   text-align: left;
 }
-
-/* #home-title {
-  grid-area: title;
-  font-size: 14px;
-  font-weight: bolder;
-  color: #ab3320;
-} */
 
 #home-content {
   grid-area: content;
